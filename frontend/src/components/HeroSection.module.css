@@ -1,0 +1,143 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    background-color: var(--background-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    /* Para responsividade */
+}
+
+.content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.destaque {
+    color: var(--secondary-color);
+}
+
+.content p {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    color: var(--neutral-color);
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 140px;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+}
+
+.secondary:hover {
+    background-color: var(--primary-color);
+}
+
+.featuresList {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1rem;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.featuresList li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.featuresList li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.imageWrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 400px;
+}
+
+.heroImage {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .featuresList {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .imageWrapper {
+        margin-top: 2rem;
+        max-width: 80%;
+    }
+}
