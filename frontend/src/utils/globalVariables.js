@@ -8,3 +8,5 @@ export const ERROR_COLOR = "#BF0101"
 export const WARNING_COLOR = "#FFA600";
 export const SUCCESS_COLOR = "#28A30F"
 export const BACKGROUND_COLOR = "#E8DFEA";
+
+export const PRIMARY_FONT = "Inter";
