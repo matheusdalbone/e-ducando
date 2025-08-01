@@ -1,4 +1,15 @@
 .text {
-  font-family: Arial, Helvetica, sans-serif;
-  color: green;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.small {
+    font-size: 0.875rem;
+}
+
+.medium {
+    font-size: 1rem;
+}
+
+.large {
+    font-size: 1.5rem;
 }

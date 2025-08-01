@@ -1,47 +1,31 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from "react";
 import styles from "./Navbar.module.css";
+import { COLORS } from "../utils/globalVariables";
 
-export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const menuRef = useRef(null);
-
-  // Fechar menu ao clicar fora
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setMenuOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-      setMenuOpen(false);
-    }
-  };
-
+const Navbar = () => {
   return (
-    <nav className={styles.navbar} ref={menuRef}>
-      <div className={styles.logo}>E-Ducando</div>
+    <header className={styles.navbar}
+      style={{
+        "--primary-color": COLORS.PRIMARY_COLOR,
+        "--secondary-color": COLORS.SECONDARY_COLOR,
+        "--background-color": COLORS.BACKGROUND_COLOR,
+        "--white": COLORS.WHITE_COLOR,
+      }}
+    >
+      <div className={styles.container}> {/* Logo */}
+        <h1 className={styles.logo}>E-ducando</h1>
+        <nav className={styles.navLinks}>
+          <a href="#inicio">Início</a>
+          <a href="#beneficios">Benefícios</a>
+          <a href="#acesso">Acesso</a>
+          <a href="#depoimentos">Depoimentos</a>
+          <a href="#contato">Contato</a>
+        </nav>
 
-      <button
-        className={styles.menuToggle}
-        onClick={() => setMenuOpen(!menuOpen)}
-        aria-label="Abrir menu"
-      >
-        {menuOpen ? '✕' : '☰'}
-      </button>
-
-      <ul className={`${styles.menu} ${menuOpen ? styles.open : ''}`}>
-        <li><button onClick={() => scrollToSection('inicio')}>Início</button></li>
-        <li><button onClick={() => scrollToSection('sobre')}>Sobre</button></li>
-        <li><button onClick={() => scrollToSection('funcionalidades')}>Funcionalidades</button></li>
-        <li><button onClick={() => scrollToSection('contato')}>Contato</button></li>
-      </ul>
-    </nav>
+        <button className={styles.ctaButton}>Começar Agora</button>
+      </div>
+    </header>
   );
-}
+};
+
+export default Navbar;
