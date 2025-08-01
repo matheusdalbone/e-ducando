@@ -37,10 +37,11 @@ export default function Navbar() {
       </button>
 
       <ul className={`${styles.menu} ${menuOpen ? styles.open : ''}`}>
-        <li><button onClick={() => scrollToSection('inicio')}>Início</button></li>
-        <li><button onClick={() => scrollToSection('sobre')}>Sobre</button></li>
-        <li><button onClick={() => scrollToSection('funcionalidades')}>Funcionalidades</button></li>
-        <li><button onClick={() => scrollToSection('contato')}>Contato</button></li>
+        <li><button onClick={() => scrollToSection('Inicio')}>Início</button></li>
+        <li><button onClick={() => scrollToSection('Benefícios')}>Benefícios</button></li>
+        <li><button onClick={() => scrollToSection('Acesso')}>Acesso</button></li>
+        <li><button onClick={() => scrollToSection('Depoimentos')}>Depoimentos</button></li>
+        <li><button onClick={() => scrollToSection('Contato')}>Contato</button></li>
       </ul>
     </nav>
   );

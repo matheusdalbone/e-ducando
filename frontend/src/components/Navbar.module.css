@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #004080;
+  background-color: #FAEDFD;
   padding: 1rem 2rem;
   color: white;
   position: relative;
@@ -14,6 +14,7 @@
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  color: #2C0735;
 }
 
 .menuToggle {
@@ -34,7 +35,7 @@
 .menu li button {
   background: none;
   border: none;
-  color: white;
+  color: #2C0735;
   font-size: 1rem;
   cursor: pointer;
 }
@@ -53,7 +54,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #004080;
+    background-color: #5EBAE3;
     flex-direction: column;
     width: 100%;
     display: none;
