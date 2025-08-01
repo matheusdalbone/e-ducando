@@ -1,17 +1,19 @@
 import React from "react";
 import styles from "./styles.module.css"
 
-const Text = ({ font, size, color, children, as: Component = 'p' }) => {
+const Text = ({ font, size, color, weight, children, lineHeight, as: Component = 'p' }) => {
   
   const textStyle = {
     color: color,
     fontSize: size,
-    fontFamily: font
+    fontFamily: font,
+    fontWeight: weight,
+    lineHeight: lineHeight 
   };
 
   return (
     <>
-      <Component className={styles.text} style={textStyle}>
+      <Component className={styles.default} style={textStyle}>
         { children }
       </Component>
     </>

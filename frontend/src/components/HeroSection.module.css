@@ -2,9 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 5%;
+    padding: 0 3% 0 8%;
     background-color: var(--background-color);
-    max-width: 1200px;
+    max-width: 100vw;
     margin: 0 auto;
     gap: 2rem;
     border-radius: 8px;
@@ -15,34 +15,24 @@
 
 .content {
     flex: 1;
-    max-width: 600px;
+    max-width: 680px;
 }
 
 .content h1 {
     font-size: 2.5rem;
     color: var(--primary-color);
-    margin-bottom: 1rem;
     font-weight: 700;
 }
 
-.title {
+.textSection {
     display: flex;
     flex-direction: column;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    text-align: left;
+    margin-bottom: 1.5rem;
+    gap: 36px;
 }
 
 .destaque {
     color: var(--secondary-color);
-}
-
-.content p {
-    font-size: 1.125rem;
-    margin-bottom: 1.5rem;
-    color: var(--neutral-color);
 }
 
 .buttons {
@@ -106,7 +96,7 @@
     flex: 1;
     display: flex;
     justify-content: center;
-    max-width: 400px;
+    max-width: 618px;
 }
 
 .heroImage {

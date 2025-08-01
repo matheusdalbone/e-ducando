@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./HeroSection.module.css";
-import Text from "./base/Text";
+import Text from "./base/Text/Text";
 import { COLORS } from "../utils/globalVariables";
+import HeroIllustration from "../assets/images/hero-illustration.png";
 
 const HeroSection = () => {
     return (
@@ -15,20 +16,22 @@ const HeroSection = () => {
             }}
         >
             <div className={styles.content}>
-                <h1 className={styles.title}>
-                    <span>Transforme seu</span>
-                    <span className={styles.destaque}>Aprendizado</span>
-                </h1>
-                <p>
-                    Transforme sua rotina de estudos com nossa plataforma intuitiva. Acompanhe seu progresso, organize tarefas e alcance seus objetivos acadêmicos de forma eficiente e motivadora.
-                </p>
+                <div className={styles.textSection}>
+                    <Text as="h1" size="64px" weight="700" color={ COLORS.PRIMARY_COLOR } lineHeight="60px">
+                    Transforme seu <br></br>
+                    <Text as="span" color={ COLORS.SECONDARY_COLOR }> Aprendizado</Text>
+                    </Text>
+                    <Text as="p" lineHeight="24px" weight="400" size="24px" color={ COLORS.NEUTRAL_COLOR }>
+                        Transforme sua rotina de estudos com nossa plataforma intuitiva. Acompanhe seu progresso, organize tarefas e alcance seus objetivos acadêmicos de forma eficiente e motivadora.
+                    </Text>
+                </div>
 
                 <div className={styles.buttons}>
                     <button className={styles.button}>Experimente Agora</button>
                     <button className={`${styles.button} ${styles.secondary}`}>Benefícios</button>
                 </div>
 
-                <ul className={styles.featuresList}>
+                <ul className={styles.featuresList}>    
                     <li>✓ Experiência Completa</li>
                     <li>✓ Acesso a Materiais</li>
                     <li>✓ 100% Gratuito</li>
@@ -38,7 +41,7 @@ const HeroSection = () => {
             <div className={styles.imageWrapper}>
                 {/*Imagem do estudante */}
                 <img
-                    src="/images/hero-illustration.png"
+                    src={HeroIllustration}
                     alt="Ilustração de estudante usando computador"
                     className={styles.heroImage}
                 />
