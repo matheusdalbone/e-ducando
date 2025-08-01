@@ -1,13 +1,13 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import Home from "./components/Home";
 import "./App.css";
+import HeroSection from "./components/HeroSection";
 
 export default function App() {
   return (
     <div>
       <Navbar />
-      <Home />
+      <HeroSection />
     </div>
     
   );

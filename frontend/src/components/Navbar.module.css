@@ -1,72 +1,67 @@
-/* Navbar.module.css */
-
 .navbar {
+  background-color: #E8DFEA;
+  color: var(--white);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #FAEDFD;
-  padding: 1rem 2rem;
-  color: white;
   position: relative;
-  z-index: 1000;
 }
 
 .logo {
   font-size: 1.5rem;
-  font-weight: bold;
-  color: #2C0735;
+  font-weight: 700;
+  margin: 0;
+  color: var(--primary-color);
 }
 
-.menuToggle {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-  display: none;
-}
-
-.menu {
-  list-style: none;
+.navLinks {
   display: flex;
   gap: 2rem;
 }
 
-.menu li button {
-  background: none;
+.navLinks a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.navLinks a:hover {
+  opacity: 0.75;
+}
+
+.ctaButton {
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
   border: none;
-  color: #2C0735;
-  font-size: 1rem;
-  cursor: pointer;
 }
 
-.menu li button:hover {
-  text-decoration: underline;
+.ctaButton:hover {
+  background-color: var(--white);
+  color: var(--primary-color);
 }
 
-/* Responsivo - mobile */
+/* Responsividade */
 @media (max-width: 768px) {
-  .menuToggle {
-    display: block;
+  .navbar {
+    flex-wrap: wrap;
   }
 
   .menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #5EBAE3;
-    flex-direction: column;
-    width: 100%;
-    display: none;
-  }
-
-  .menu.open {
-    display: flex;
-  }
-
-  .menu li {
-    padding: 1rem;
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    flex-basis: 100%;
+    justify-content: center;
+    margin-top: 0.5rem;
   }
 }
