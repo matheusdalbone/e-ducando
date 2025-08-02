@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./Navbar.module.css";
 import { COLORS } from "../utils/globalVariables";
+import Text from "./base/Text/Text";
+import Icon from "../assets/icons/logo.svg"
 
 const Navbar = () => {
   return (
@@ -13,13 +15,13 @@ const Navbar = () => {
       }}
     >
       <div className={styles.container}> {/* Logo */}
-        <h1 className={styles.logo}>E-ducando</h1>
+        <img src={Icon} alt="E-ducando" style={{height: "29px"}}/>
         <nav className={styles.navLinks}>
-          <a href="#inicio">Início</a>
-          <a href="#beneficios">Benefícios</a>
-          <a href="#acesso">Acesso</a>
-          <a href="#depoimentos">Depoimentos</a>
-          <a href="#contato">Contato</a>
+          <Text as='a' color={ COLORS.PRIMARY_COLOR } href="#inicio">Início</Text>
+          <Text as='a' color={ COLORS.PRIMARY_COLOR } href="#beneficios">Benefícios</Text>
+          <Text as='a' color={ COLORS.PRIMARY_COLOR } href="#acesso">Acesso</Text>
+          <Text as='a' color={ COLORS.PRIMARY_COLOR } href="#depoimentos">Depoimentos</Text>
+          <Text as='a' color={ COLORS.PRIMARY_COLOR } href="#contato">Contato</Text>
         </nav>
 
         <button className={styles.ctaButton}>Começar Agora</button>
