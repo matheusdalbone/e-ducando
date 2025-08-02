@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 /* CSS básico */
 *,
 *::before,
@@ -14,12 +16,11 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter';
   background-color: #f9fafb;
   /*color: #2C0735;*/
   line-height: 1.6;
   min-height: 100vh;
-  padding: 2rem;
 }
 
 /* Layout container padrão */
