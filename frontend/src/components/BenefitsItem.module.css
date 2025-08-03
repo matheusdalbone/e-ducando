@@ -25,12 +25,6 @@
   margin-bottom: 16px;
 }
 
-.icon {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-}
-
 .benefitsCard h3 {
   font-size: 1.15em;
   margin-bottom: 12px;
