@@ -1,0 +1,42 @@
+.benefitsCard {
+  background: var(--white);
+  border-radius: 12px;
+  width: 280px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.01);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+  cursor: default;
+}
+
+.benefitsCard:hover {
+  transform: translateY(-8px);
+}
+
+.iconWrapper {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.benefitsCard h3 {
+  font-size: 1.15em;
+  margin-bottom: 12px;
+}
+
+.benefitsCard p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}

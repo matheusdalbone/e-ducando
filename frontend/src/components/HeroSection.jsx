@@ -39,7 +39,6 @@ const HeroSection = () => {
             </div>
 
             <div className={styles.imageWrapper}>
-                {/*Imagem do estudante */}
                 <img
                     src={HeroIllustration}
                     alt="Ilustração de estudante usando computador"
