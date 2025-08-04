@@ -1,9 +1,12 @@
-<svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect width="38" height="38" fill="url(#pattern0_208_1073)"/>
-<defs>
-<pattern id="pattern0_208_1073" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_208_1073" transform="scale(0.0104167)"/>
-</pattern>
-<image id="image0_208_1073" width="96" height="96" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAADuklEQVR4nO2dTU8UQRCG34QPNYIHEY2fZ2W5EP+CekETEo3xg/gDDIKgJxMT7woucML4E4xXg8aD4abhoqAH41H0oCQCkvBlmU6KxGxcpmdnZ6q2u57kvewu9FtVM709PUMBGIZhGIZuDgO4BmACwDSAzwAWAayzFvk19944f9b9jJGBTgC3AcwCoBr1DsAQ/y7DkxMAJgGsZkh8pVb57DkuHZxmWvhoXa5j4v9XiAcAdksHq40SgLkcE1+pDwC6pIPWwlUAvwtM/rZWAFxG5AwA2BJI/rb+ALiDSLkpmPhKDSPCaWcrZZIWAEwB6AfQA6ADQDOrg19z7z0B8C3l796KaToqpZzz3wDoBdCUYgz32fMAZlJ+J5xC4OxKsdpZANBXhzEvAvjqOeZ7AK0ImPsprmCP1nFcdyX82nPsewj4Ctfn6vY5gD05jO+O7Gce47vp8RgCZNIj+Lc5Jf/fIvicCW5DLyg6PY7+hTpPO9U4yGPt5GU1tA28YY+jrq9AP5c8/NxCQMx6LDWLZsZjOgyCIx5HW6+Arwse2xSHEADXPeb+JgFfbszvCd6uIAAmEoKcEvT2NMFbGQEwnRBkv6C3GwneXiAAviQE2SPo7XSCN3ejv+H5mRDkfkFvBxK8/UAArCUE2SLorTXBm/Pe8CQtQaXR7i/4AEm5v+ADJOX+gg+QlPur6ZbjY77zteIRICnXCscypv1Zolbe899UkDTKSZt8r0By5VY1+a8UJIgK0kttRfC52xWaylA054c87VAVbWh5jKWsIBkkpFEoYF5BIkhI7ilrcfJ8np+UawkKoMglDkUucShyiUORSxyKXOJQ5BKHIpc4FLnEocglDkUucShyiUORS5yiA57jNjbuPsReVon/CERiZ1acogJd49YGOz3K7t4b5CZOVoA6J/9MCk9nCyyCOEUEOVCDL9d7yApQpzm/qQZfrofERytAdg1l8DZiBciurgzeuq0A2dWWwVu7FSC72jN422cFyK5SBm82BQm3E7trBciu+QzL0E9WgPpoMKcGIVYA+Gmdtxd8OWdbEfkUYYinlmo085Fvm3E5fyeM8AqnjdXNDViL2HqIvgCkTOJQ5BKHIpc4FLnEocglDkUucShyiUORSxyKXOJQ5BKHIpc4FLnEWVKQBBLSLyigyH/ARsqkolXBmIJEkJAeQgFdEberOQkljCtICBUsd+aroYXbeFEkmtbWsgxsqMynJgWqDT7y1SW/8jthlFcIIfQSWuZYHmlpUWYYhmEYhmEYBhqav/FxJRPATgbLAAAAAElFTkSuQmCC"/>
-</defs>
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg fill="#000000" width="800px" height="800px" viewBox="-13.39 0 122.88 122.88" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  enable-background="new 0 0 96.108 122.88" xml:space="preserve">
+
+<g>
+
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.892,56.036h8.959v-1.075V37.117c0-10.205,4.177-19.484,10.898-26.207v-0.009 C29.473,4.177,38.754,0,48.966,0C59.17,0,68.449,4.177,75.173,10.901l0.01,0.009c6.721,6.723,10.898,16.002,10.898,26.207v17.844 v1.075h7.136c1.59,0,2.892,1.302,2.892,2.891v61.062c0,1.589-1.302,2.891-2.892,2.891H2.892c-1.59,0-2.892-1.302-2.892-2.891 V58.927C0,57.338,1.302,56.036,2.892,56.036L2.892,56.036z M26.271,56.036h45.387v-1.075V36.911c0-6.24-2.554-11.917-6.662-16.03 l-0.005,0.004c-4.111-4.114-9.787-6.669-16.025-6.669c-6.241,0-11.917,2.554-16.033,6.665c-4.109,4.113-6.662,9.79-6.662,16.03 v18.051V56.036L26.271,56.036z M49.149,89.448l4.581,21.139l-12.557,0.053l3.685-21.423c-3.431-1.1-5.918-4.315-5.918-8.111 c0-4.701,3.81-8.511,8.513-8.511c4.698,0,8.511,3.81,8.511,8.511C55.964,85.226,53.036,88.663,49.149,89.448L49.149,89.448z"/>
+
+</g>
+
 </svg>
