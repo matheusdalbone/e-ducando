@@ -1,0 +1,30 @@
+.modal {
+  padding: 1.125rem;
+  max-width: 37.5rem;
+  height: 10.8125rem;
+  border-radius: .75rem;
+  display: flex;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.imageWrapper {
+  width: 8rem;
+}
+
+.imageWrapper img {
+  width: 2.9688rem;
+}
+
+.nameContainer {
+  display: flex;
+  flex-direction: column;
+  gap: .875rem;
+  margin-top: .5rem;
+}

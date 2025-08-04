@@ -1,0 +1,25 @@
+.ratingSection {
+  background-color: var(--background-color);
+  max-height: 47.375rem;
+  height: 48rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.375rem;
+}
+
+.ratingsGrid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2, 39.375rem);
+  grid-template-rows: repeat(2, 12.5rem);
+}
+
+.textSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.125rem;
+}

@@ -3,9 +3,12 @@ import styles from "./HeroSection.module.css";
 import Text from "./base/Text/Text";
 import { COLORS } from "../utils/globalVariables";
 import HeroIllustration from "../assets/images/hero-illustration.png";
+import RatingSection from "./widgets/RatingSection/RatingSection";
+import BenefitsSection from "./BenefitsSection";
 
 const HeroSection = () => {
     return (
+        <>
         <section className={styles.hero}
             style={{
                 "--primary-color": COLORS.PRIMARY_COLOR,
@@ -45,7 +48,10 @@ const HeroSection = () => {
                     className={styles.heroImage}
                 />
             </div>
-        </section>
+            </section>
+            <BenefitsSection />
+            <RatingSection></RatingSection>
+        </>
     );
 };
 
