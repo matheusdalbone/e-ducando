@@ -1,10 +1,12 @@
 import React from "react";
 import styles from "./HeroSection.module.css";
-import Text from "./base/Text/Text";
+import Text from "./common/Text/Text";
+import Button from "./common/Button/Button";
 import { COLORS } from "../utils/globalVariables";
 import HeroIllustration from "../assets/images/hero-illustration.png";
 import RatingSection from "./widgets/RatingSection/RatingSection";
 import BenefitsSection from "./BenefitsSection";
+import TrialCardSection from "./widgets/TrialCardSection/TrialCardSection";
 
 const HeroSection = () => {
     return (
@@ -30,14 +32,14 @@ const HeroSection = () => {
                 </div>
 
                 <div className={styles.buttons}>
-                    <button className={styles.button}>Experimente Agora</button>
-                    <button className={`${styles.button} ${styles.secondary}`}>Benefícios</button>
+                    <Button onClick={() => console.log('Clicou em Experimente Agora')} variant="primary-button">Experimente Agora</Button>
+                    <Button onClick={() => console.log('Clicou em Benefícios!')} variant="secondary-button">Benefícios</Button>
                 </div>
 
                 <ul className={styles.featuresList}>    
-                    <li>✓ Experiência Completa</li>
-                    <li>✓ Acesso a Materiais</li>
-                    <li>✓ 100% Gratuito</li>
+                    <li> Experiência Completa</li>
+                    <li> Acesso a Materiais</li>
+                    <li> 100% Gratuito</li>
                 </ul>
             </div>
 
@@ -51,6 +53,7 @@ const HeroSection = () => {
             </section>
             <BenefitsSection />
             <RatingSection></RatingSection>
+            <TrialCardSection></TrialCardSection>
         </>
     );
 };

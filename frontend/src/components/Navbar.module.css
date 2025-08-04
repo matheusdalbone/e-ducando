@@ -31,22 +31,6 @@
   opacity: 0.75;
 }
 
-.ctaButton {
-  background-color: var(--primary-color);
-  color: var(--white);
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border: none;
-}
-
-.ctaButton:hover {
-  background-color: var(--white);
-  color: var(--primary-color);
-}
-
 /* Responsividade */
 @media (max-width: 768px) {
   .navbar {

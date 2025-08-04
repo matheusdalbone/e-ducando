@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './styles.module.css';
 import { COLORS } from '../../../utils/globalVariables';
-import RatingModal from '../../base/RatingModal/RatingModal';
-import Text from '../../base/Text/Text';
+import RatingModal from '../../common/RatingModal/RatingModal';
+import Text from '../../common/Text/Text';
 
 const mockedRatings = [
   { name: "Ana Silva", description: "Estudante de Engenharia", rating: '4', comment: "A plataforma mudou completamente minha forma de estudar. Os materiais interativos me ajudaram muito"},

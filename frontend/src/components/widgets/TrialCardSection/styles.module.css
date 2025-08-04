@@ -1,0 +1,50 @@
+.cardsSection {
+  background-color: #f7f0fb;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.whiteContainer {
+  background: white;
+  padding: 40px 32px;
+  border-radius: 16px;
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.cardsGrid {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 64px;
+  margin-top: 40px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.mainButtonWrapper {
+  margin-top: 40px;
+}
+
+.logoImage {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.cardsSection p {
+  opacity: 0.8;
+}
+
+.cardsSection h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+}

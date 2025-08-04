@@ -1,0 +1,31 @@
+.trialCard {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  width: 280px;
+  min-width: 280px; 
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconWrapper {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.trialCard h3 {
+  font-size: 1.15em;
+  margin-bottom: 12px;
+}
+
+.trialCard p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}

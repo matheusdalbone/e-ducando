@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M128 128C128 110.3 113.7 96 96 96C78.3 96 64 110.3 64 128L64 464C64 508.2 99.8 544 144 544L544 544C561.7 544 576 529.7 576 512C576 494.3 561.7 480 544 480L144 480C135.2 480 128 472.8 128 464L128 128zM534.6 214.6C547.1 202.1 547.1 181.8 534.6 169.3C522.1 156.8 501.8 156.8 489.3 169.3L384 274.7L326.6 217.4C314.1 204.9 293.8 204.9 281.3 217.4L185.3 313.4C172.8 325.9 172.8 346.2 185.3 358.7C197.8 371.2 218.1 371.2 230.6 358.7L304 285.3L361.4 342.7C373.9 355.2 394.2 355.2 406.7 342.7L534.7 214.7z"/></svg>
+<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="56" height="56" fill="url(#pattern0_208_923)"/>
+<defs>
+<pattern id="pattern0_208_923" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_208_923" transform="scale(0.0104167)"/>
+</pattern>
+<image id="image0_208_923" width="96" height="96" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB2UlEQVR4nO3WMU5DQQxFUe+AxVCwNFq2lRVkNygddI+G30QkEPz9fWfmHYnWGvsmIhFmZmZmZmZmZmZ1XiNCO/5Vo70HF6Ea7T24CNVo78FFqEZ7Dy5CNdp7cBGq0d6Di1CN9p4yLxHxAVyY9p4SzxHx7m/AeMfXAe+jvQd1fB3wRtp7UMfXAe+kvWe3f7iXPy706QB9n/zLd6x7P1GrTRXgP8ff3IpQbZoAmePfi1BtigB7HP9WhGrDB9jz+D9FqDZ0gIrjX0eoNmyAR35qXh48/uYt6g0ZoPKTf7ThAsx0/OECzHb8oQLMePxhAsx6/CECzHx8fIDZj48OsMLxsQFWOT4ywErHRwY4LXR8ZICniDgvcnxkgN8idB9fOx8MGeBWhO7jLxXgOgLh+MsF2CKcIMdfMgCNHKCXHKCXHKCXHKCXHKCXHKCXHKCXHKCXHKCXHKCXHKCXHGCug8kBwgEqCX4wBwgHKCX4wRwgHKCU4AdzgHCA0gdpsXlp9AUFn5dGX1DweWn0BQWfl0ZfUPB5afQFBZ+XRl9Q8Hlp9AUFn5dGX1DweWn0BQWfl0ZfUPB5afQFBZ+XRl9Q8Hlp9AUFn5dGX1DweWn0BQWfZ2ZmZmZmZmZmsaYvWgrkyaiOF90AAAAASUVORK5CYII="/>
+</defs>
+</svg>

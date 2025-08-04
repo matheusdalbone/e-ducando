@@ -1,6 +1,6 @@
 import React from "react";
 import BenefitsItem from "./BenefitsItem";
-import Text from "./base/Text/Text";
+import Text from "./common/Text/Text";
 import styles from './BenefitsSection.module.css';
 import { COLORS } from "../utils/globalVariables";
 

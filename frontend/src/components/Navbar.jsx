@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "./Navbar.module.css";
 import { COLORS } from "../utils/globalVariables";
-import Text from "./base/Text/Text";
-import Icon from "../assets/icons/logo.svg"
+import Text from "./common/Text/Text";
+import Button from "./common/Button/Button";
+import Icon from "../assets/icons/logo.svg";
 
 const Navbar = () => {
   return (
@@ -14,7 +15,7 @@ const Navbar = () => {
         "--white": COLORS.WHITE_COLOR,
       }}
     >
-      <div className={styles.container}> {/* Logo */}
+      <div className={styles.container}>
         <img src={Icon} alt="E-ducando" style={{height: "29px"}}/>
         <nav className={styles.navLinks}>
           <Text as='a' color={ COLORS.PRIMARY_COLOR } href="#inicio">Início</Text>
@@ -24,7 +25,7 @@ const Navbar = () => {
           <Text as='a' color={ COLORS.PRIMARY_COLOR } href="#contato">Contato</Text>
         </nav>
 
-        <button className={styles.ctaButton}>Começar Agora</button>
+        <Button onClick={() => console.log('Clicou em Começar Agora')} variant="primary-button">Começar Agora</Button>
       </div>
     </header>
   );
