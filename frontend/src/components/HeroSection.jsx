@@ -1,16 +1,20 @@
 import React from "react";
+
 import styles from "./HeroSection.module.css";
+
+import { COLORS } from "../utils/globalVariables";
+
 import Text from "./common/Text/Text";
 import Button from "./common/Button/Button";
-import { COLORS } from "../utils/globalVariables";
 import HeroIllustration from "../assets/images/hero-illustration.png";
 import RatingSection from "./widgets/RatingSection/RatingSection";
 import BenefitsSection from "./BenefitsSection";
 import TrialCardSection from "./widgets/TrialCardSection/TrialCardSection";
+import Layout from "./common/Layout/Layout";
 
 const HeroSection = () => {
     return (
-        <>
+        <Layout>
         <section className={styles.hero}
             style={{
                 "--primary-color": COLORS.PRIMARY_COLOR,
@@ -54,7 +58,7 @@ const HeroSection = () => {
             <BenefitsSection />
             <RatingSection></RatingSection>
             <TrialCardSection></TrialCardSection>
-        </>
+        </Layout>
     );
 };
 
