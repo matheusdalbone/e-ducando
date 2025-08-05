@@ -16,6 +16,7 @@
     flex: 1;
     padding-top: 3%;
     max-width: 680px;
+    min-width: 280px;
 }
 
 .content h1 {
@@ -49,8 +50,7 @@
     color: var(--primary-color);
     font-weight: 600;
     font-size: 1rem;
-    flex-wrap: nowrap;
-    white-space: nowrap;
+    flex-wrap: wrap;
 }
 
 .featuresList li {
@@ -87,7 +87,6 @@
     object-fit: contain;
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
@@ -105,11 +104,42 @@
 
     .featuresList {
         justify-content: center;
-        flex-wrap: wrap;
     }
 
     .imageWrapper {
         margin-top: 2rem;
         max-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .textSection {
+        gap: 24px;
+    }
+
+    .featuresList {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .featuresList li {
+        padding-left: 1.5rem;
+    }
+
+    .featuresList li::before {
+        width: 18px;
+        height: 18px;
+        font-size: 0.8rem;
+    }
+
+    .imageWrapper {
+        max-width: 100%;
     }
 }

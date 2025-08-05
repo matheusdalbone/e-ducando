@@ -34,3 +34,52 @@
   font-size: 0.9rem;
   line-height: 1.5;
 }
+
+@media (hover: none) and (pointer: coarse) {
+  .benefitsCard:hover {
+    transform: none;
+  }
+}
+
+.iconWrapper {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.benefitsCard h3 {
+  font-size: 1.15em;
+  margin-bottom: 12px;
+}
+
+.benefitsCard p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Responsividade para telas até 600px */
+@media (max-width: 600px) {
+  .benefitsCard {
+    width: 90%;
+    /* Ocupa quase toda a largura no mobile */
+    padding: 16px;
+  }
+
+  .iconWrapper {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 12px;
+  }
+
+  .benefitsCard h3 {
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+
+  .benefitsCard p {
+    font-size: 0.85rem;
+  }
+}

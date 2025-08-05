@@ -8,7 +8,7 @@
 }
 
 .benefitsSection p {
-    opacity: 0.8; 
+    opacity: 0.8;
 }
 
 .benefitsSection h1 {
@@ -22,4 +22,28 @@
     gap: 24px;
     justify-items: center;
     margin-top: 40px;
+}
+
+@media (max-width: 1024px) {
+    .benefitsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .benefitsSection {
+        height: auto;
+        padding: 40px 15px;
+    }
+
+    .benefitsSection h1 {
+        font-size: 1.6em;
+    }
+
+    .benefitsGrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 30px;
+    }
 }

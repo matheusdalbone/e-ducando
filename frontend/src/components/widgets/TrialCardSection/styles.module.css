@@ -24,6 +24,7 @@
   margin-top: 40px;
   flex-wrap: nowrap;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .mainButtonWrapper {
@@ -47,4 +48,27 @@
 .logoWrapper {
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .cardsGrid {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardsGrid {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cardsGrid {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    overflow-x: visible;
+  }
 }
