@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-/* CSS básico */
 *,
 *::before,
 *::after {
@@ -9,7 +8,6 @@
   box-sizing: border-box;
 }
 
-/* Tipografia base */
 html {
   font-size: 16px;
   scroll-behavior: smooth;
@@ -23,7 +21,6 @@ body {
   min-height: 100vh;
 }
 
-/* Layout container padrão */
 .container {
   max-width: 1200px;
   margin-left: auto;
@@ -32,7 +29,6 @@ body {
   padding-right: 1rem;
 }
 
-/* Links */
 a {
   color: #2563eb;
   text-decoration: none;
@@ -45,7 +41,6 @@ a:focus {
   outline: none;
 }
 
-/* Imagens responsivas */
 img,
 picture,
 video,
@@ -56,7 +51,6 @@ svg {
   height: auto;
 }
 
-/* Botões básicos */
 button {
   font-family: inherit;
   cursor: pointer;
@@ -74,17 +68,20 @@ button:focus {
   outline: none;
 }
 
-/* Tipografia Responsiva */
 @media (max-width: 768px) {
   .home {
     flex-direction: column;
     padding: 1rem;
   }
-  .home-texto, .home-imagem {
+
+  .home-texto,
+  .home-imagem {
     width: 100%;
     text-align: center;
   }
+
   .botoes {
     justify-content: center;
+    flex-wrap: wrap;
   }
 }
