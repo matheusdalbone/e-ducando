@@ -4,7 +4,7 @@ import { COLORS } from "../../../utils/globalVariables";
 import Text from "../../common/Text/Text";
 import Button from "../../common/Button/Button";
 import Icon from "../../../assets/icons/logo.svg";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 const Navbar = () => {
   return (
