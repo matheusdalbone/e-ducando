@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router';
 
-import HeroSection from '../../components/HeroSection';
+import HeroSection from '../../pages/HeroSection/HeroSection';
 
 const RoutesApp = () => {
 

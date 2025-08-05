@@ -1,15 +1,15 @@
 import React from "react";
 import BenefitsItem from "./BenefitsItem";
-import Text from "./common/Text/Text";
+import Text from "../../common/Text/Text";
 import styles from './BenefitsSection.module.css';
-import { COLORS } from "../utils/globalVariables";
+import { COLORS } from "../../../utils/globalVariables";
 
-import targetIcon from '../assets/icons/target.svg';
-import usersIcon from '../assets/icons/users.svg';
-import progressIcon from '../assets/icons/progress.svg';
-import bookIcon from '../assets/icons/book.svg';
-import calendarIcon from '../assets/icons/calendar.svg';
-import clockIcon from '../assets/icons/clock.svg';
+import targetIcon from '../../../assets/icons/target.svg';
+import usersIcon from '../../../assets/icons/users.svg';
+import progressIcon from '../../../assets/icons/progress.svg';
+import bookIcon from '../../../assets/icons/book.svg';
+import calendarIcon from '../../../assets/icons/calendar.svg';
+import clockIcon from '../../../assets/icons/clock.svg';
 
 
 const defaultBenefits = [

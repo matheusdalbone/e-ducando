@@ -1,8 +1,8 @@
 import React from "react";
 import styles from './BenefitsItem.module.css';
-import Text from "./common/Text/Text";
-import { COLORS } from "../utils/globalVariables";
-import Icon from "./common/Icons/Icons";
+import Text from "../../common/Text/Text";
+import { COLORS } from "../../../utils/globalVariables";
+import Icon from "../../common/Icons/Icons";
 
 const BenefitsItem = ({ iconSrc, iconAlt, title, description }) => {
     return (

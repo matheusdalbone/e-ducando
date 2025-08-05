@@ -2,15 +2,15 @@ import React from "react";
 
 import styles from "./HeroSection.module.css";
 
-import { COLORS } from "../utils/globalVariables";
+import { COLORS } from "../../utils/globalVariables";
 
-import Text from "./common/Text/Text";
-import Button from "./common/Button/Button";
-import HeroIllustration from "../assets/images/hero-illustration.png";
-import RatingSection from "./widgets/RatingSection/RatingSection";
-import BenefitsSection from "./BenefitsSection";
-import TrialCardSection from "./widgets/TrialCardSection/TrialCardSection";
-import Layout from "./common/Layout/Layout";
+import Text from "../../components/common/Text/Text";
+import Button from "../../components/common/Button/Button";
+import HeroIllustration from "../../assets/images/hero-illustration.png";
+import RatingSection from "../../components/widgets/RatingSection/RatingSection";
+import BenefitsSection from "../../components/widgets/BenefitsSection/BenefitsSection";
+import TrialCardSection from "../../components/widgets/TrialCardSection/TrialCardSection";
+import Layout from "../../components/common/Layout/Layout";
 
 const HeroSection = () => {
     return (
