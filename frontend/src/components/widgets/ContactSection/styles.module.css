@@ -1,0 +1,41 @@
+.formsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  width: 100%;
+  padding: 32px 0px;
+  height: 48.5rem;
+}
+
+.container {
+  display: flex;
+  gap: 126px;
+  width: 1245px;
+}
+
+.titleSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .formsSection {
+    padding: 24px 16px;
+    height: auto;
+    gap: 2rem;
+  }
+
+  .titleSection p{
+    text-align: center;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+}

@@ -27,10 +27,10 @@ const ContactFormWidget = () => {
           <Input title="Nome" description="Seu nome completo" width="207px"></Input>
           <Input title="Telefone" description="(11) 0000-0000" width="207px"></Input>
         </div>
-        <Input title="E-mail" description="seu@email.com" width="591px"></Input>
-        <Input title="Dúvida" description="Como podemos ajudar você?" width="591px" height="83px"></Input>
-        <Checkbox title="Aceito o uso dos meus dados para entrar em contato comigo"></Checkbox>
-        <Button Button variant="primary-button" width='591px' type="submit">Experimente Agora</Button>
+          <Input title="E-mail" description="seu@email.com" width="591px"></Input>
+          <Input title="Dúvida" description="Como podemos ajudar você?" width="591px" height="83px"></Input>
+          <Checkbox title="Aceito o uso dos meus dados para entrar em contato comigo"></Checkbox>
+          <Button Button variant="primary-button" width='591px' type="submit">Experimente Agora</Button>
       </form>
     </Modal>
   );

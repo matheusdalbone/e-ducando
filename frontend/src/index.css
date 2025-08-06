@@ -88,19 +88,19 @@ button:focus {
 
 /* Entire scrollbar */
 ::-webkit-scrollbar {
-  width: 5px; /* Width of the scrollbar */
+  width: 10px; /* Width of the scrollbar */
 }
 
 /* Scrollbar track (background) */
 ::-webkit-scrollbar-track {
   background: #f1f1f1; /* Light gray background */
-  border-radius: 5px; /* Rounded corners */
+  border-radius: 8px; /* Rounded corners */
 }
 
 /* Scrollbar thumb (draggable handle) */
 ::-webkit-scrollbar-thumb {
   background: #888; /* Dark gray handle */
-  border-radius: 5px; /* Rounded corners */
+  border-radius: 8px; /* Rounded corners */
 }
 
 /* Scrollbar thumb on hover */

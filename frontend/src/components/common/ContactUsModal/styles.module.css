@@ -1,0 +1,17 @@
+.contactUs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.contactInfo {
+  display: flex;
+  gap: .875rem;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: .5625rem;
+}
+
