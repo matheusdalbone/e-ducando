@@ -1,22 +1,29 @@
-import React from "react";
+import { Link as ScrollLink } from 'react-scroll';
+import { Link as RouterLink } from 'react-router-dom';
 import styles from "./Navbar.module.css";
-import { COLORS } from "../../../utils/globalVariables";
+
 import Text from "../../common/Text/Text";
 import Button from "../../common/Button/Button";
 import Icon from "../../../assets/icons/logo.svg";
-import { Link } from "react-router";
+import { COLORS } from "../../../utils/globalVariables";
 
 const Navbar = () => {
+  const scrollOffset = -80;
+  const scrollDuration = 200;
+
   return (
     <header className={styles.navbar}>
       <div className={styles.container}>
-        <img src={Icon} alt="E-ducando" style={{height: "29px"}}/>
+        <RouterLink to="/">
+          <img src={Icon} alt="E-ducando" style={{ height: "29px" }} />
+        </RouterLink>
+
         <nav className={styles.navLinks}>
-          <Text as={ Link } color={ COLORS.PRIMARY_COLOR } to="/">Início</Text>
-          <Text as={ Link } color={ COLORS.PRIMARY_COLOR } to="/beneficios">Benefícios</Text>
-          <Text as={ Link } color={ COLORS.PRIMARY_COLOR } to="/acesso">Acesso</Text>
-          <Text as={ Link } color={ COLORS.PRIMARY_COLOR } to="/depoimentos">Depoimentos</Text>
-          <Text as={ Link } color={ COLORS.PRIMARY_COLOR } to="/contato">Contato</Text>
+          <Text as={ScrollLink} to="inicio" smooth={'easeInOutCubic'} duration={scrollDuration} offset={scrollOffset} color={COLORS.PRIMARY_COLOR} >Início</Text>
+          <Text as={ScrollLink} to="beneficios" smooth={'easeInOutCubic'} duration={scrollDuration} offset={scrollOffset} color={COLORS.PRIMARY_COLOR} >Benefícios</Text>
+          <Text as={ScrollLink} to="acesso" smooth={'easeInOutCubic'} duration={scrollDuration} offset={scrollOffset} color={COLORS.PRIMARY_COLOR} >Acesso</Text>
+          <Text as={ScrollLink} to="depoimentos" smooth={'easeInOutCubic'} duration={scrollDuration} offset={scrollOffset} color={COLORS.PRIMARY_COLOR} >Depoimentos</Text>
+          <Text as={ScrollLink} to="contato" smooth={'easeInOutCubic'} duration={scrollDuration} offset={scrollOffset} color={COLORS.PRIMARY_COLOR} >Contato</Text>
         </nav>
 
         <Button onClick={() => console.log('Clicou em Começar Agora')} variant="primary-button">Começar Agora</Button>
