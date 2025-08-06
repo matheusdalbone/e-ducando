@@ -6,13 +6,7 @@ import { COLORS } from "../../../utils/globalVariables";
 
 const PageError = ({ pageName }) => {
   return (
-    <div className={styles.container} 
-    style={{
-      "--primary-color": COLORS.PRIMARY_COLOR,
-      "--secondary-color": COLORS.SECONDARY_COLOR,
-      "--background-color": COLORS.BACKGROUND_COLOR,
-      "--white": COLORS.WHITE_COLOR,
-    }}>
+    <div className={styles.container}>
       <div className={styles.emoji} role="img" aria-label="Construção">
         🚧
       </div>

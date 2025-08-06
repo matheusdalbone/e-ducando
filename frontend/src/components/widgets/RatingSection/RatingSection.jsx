@@ -15,7 +15,7 @@ const RatingSection = ({ ratings = mockedRatings }) => {
 
 
   return (
-    <section className={styles.ratingSection} style={{ "--background-color": COLORS.BACKGROUND_COLOR }}>
+    <section className={styles.ratingSection}>
       <div className={ styles.textSection }>
         <Text as='h2' weight='700' size='36px' color={COLORS.PRIMARY_COLOR} lineHeight='60px'>O que nossos estudantes dizem</Text>
         <Text as='h3' weight='400' size='24px' color={COLORS.NEUTRAL_COLOR} opacity='60%' lineHeight='32px'>Mais de 10.000 estudantes já transformaram sua forma de aprender conosco</Text>

@@ -1,11 +1,12 @@
 import React from 'react';
-import { Routes, Route } from 'react-router';
+import { Routes, Route, useLocation } from 'react-router';
 
 import HeroSection from '../../pages/HeroSection/HeroSection';
 import Benefits from '../../pages/Benefits/Benefits';
 import Access from '../../pages/Access/Access';
 import Testimonials from '../../pages/Testimonials/Testimonials';
 import Contact from '../../pages/Contact/Contact';
+import PageError from '../../components/widgets/PageError/PageError';
 
 const RoutesApp = () => {
 

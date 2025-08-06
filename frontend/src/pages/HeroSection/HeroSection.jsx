@@ -11,19 +11,13 @@ import RatingSection from "../../components/widgets/RatingSection/RatingSection"
 import BenefitsSection from "../../components/widgets/BenefitsSection/BenefitsSection";
 import TrialCardSection from "../../components/widgets/TrialCardSection/TrialCardSection";
 import Layout from "../../components/common/Layout/Layout";
+import ContactFormWidget from "../../components/widgets/Forms/ContactFormWidget/ContactFormWidget";
+
 
 const HeroSection = () => {
     return (
         <Layout>
-        <section className={styles.hero}
-            style={{
-                "--primary-color": COLORS.PRIMARY_COLOR,
-                "--secondary-color": COLORS.SECONDARY_COLOR,
-                "--background-color": COLORS.BACKGROUND_COLOR,
-                "--neutral-color": COLORS.NEUTRAL_COLOR,
-                "--white": COLORS.WHITE_COLOR,
-            }}
-        >
+        <section className={styles.hero}>
             <div className={styles.content}>
                 <div className={styles.textSection}>
                     <Text as="h1" size="64px" weight="700" color={ COLORS.PRIMARY_COLOR } lineHeight="60px">
@@ -58,6 +52,7 @@ const HeroSection = () => {
             <BenefitsSection />
             <RatingSection></RatingSection>
             <TrialCardSection></TrialCardSection>
+            <ContactFormWidget></ContactFormWidget>
         </Layout>
     );
 };

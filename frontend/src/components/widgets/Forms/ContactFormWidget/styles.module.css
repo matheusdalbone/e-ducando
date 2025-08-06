@@ -1,0 +1,14 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+.contactContainer {
+  display: flex;
+  align-self: flex-start;
+  gap: 1.125rem;
+}
