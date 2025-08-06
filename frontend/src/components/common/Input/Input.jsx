@@ -20,10 +20,7 @@ const Input = ({ title, description, onChange, width, height }) => {
   };
 
   return (
-    <label className={ styles.inputContainer } style={{
-      "--background-color": COLORS.BACKGROUND_COLOR,
-      "--neutral-color": COLORS.NEUTRAL_COLOR
-                }}>
+    <label className={ styles.inputContainer }>
       <Text as='span' lineHeight="16px" size="12px" weight="700">{ titleFormated }</Text>
       <div className={styles.input} style={inputStyle} contentEditable onInput={handleInputText}></div>
       { inputText.length == 0 ? <Text as='span' className={ styles.placeholder }>{ description }</Text> : null }

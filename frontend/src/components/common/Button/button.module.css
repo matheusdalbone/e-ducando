@@ -9,21 +9,21 @@
 }
 
 .primary {
-  background-color: var(--primary-color);
-  color: var(--white);
+  background-color: var(--PRIMARY_COLOR);
+  color: var(--WHITE_COLOR);
 }
 
 .primary:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--SECONDARY_COLOR);
 }
 
 .secondary {
-  background-color: var(--secondary-color);
-  color: var(--white);
+  background-color: var(--SECONDARY_COLOR);
+  color: var(--WHITE_COLOR);
 }
 
 .secondary:hover {
-  background-color: var(--primary-color);
+  background-color: var(--PRIMARY_COLOR);
 }
 
 @media (max-width: 600px) {

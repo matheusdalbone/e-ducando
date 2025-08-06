@@ -2,7 +2,7 @@
   width: 100vw;
   position: fixed;
   background-color: #E8DFEA;
-  color: var(--white);
+  color: var(--WHITE_COLOR);
   padding: 1rem 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -28,7 +28,7 @@
 }
 
 .navLinks a {
-  color: var(--primary-color);
+  color: var(--PRIMARY_COLOR);
   text-decoration: none;
   font-weight: 500;
   transition: opacity 0.2s;

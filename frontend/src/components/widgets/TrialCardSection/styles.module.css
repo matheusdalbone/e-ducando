@@ -6,7 +6,7 @@
 }
 
 .whiteContainer {
-  background: white;
+  background: var(--WHITE_COLOR);
   padding: 40px 32px;
   border-radius: 16px;
   max-width: 1200px;

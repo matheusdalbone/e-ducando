@@ -1,5 +1,5 @@
 .ratingSection {
-  background-color: var(--background-color);
+  background-color: var(--BACKGROUND_COLOR);
   max-height: 47.375rem;
   height: 48rem;
   display: flex;

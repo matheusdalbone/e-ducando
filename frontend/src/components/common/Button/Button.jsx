@@ -6,10 +6,9 @@ import { COLORS } from '../../../utils/globalVariables';
 const Button = ({ children, onClick, variant = 'primary-button', type = 'button', disabled = false, width, height, ...rest }) => {
     const variantClass = variant === 'secondary-button' ? styles.secondary : styles.primary;
   
-    const componentStyles = {
-      '--primary-color': variant === 'primary-button' ? COLORS.PRIMARY_COLOR : COLORS.SECONDARY_COLOR,
-      '--secondary-color': variant === 'primary-button' ? COLORS.SECONDARY_COLOR : COLORS.PRIMARY_COLOR,
-      '--white': COLORS.WHITE_COLOR, width: width, height: height,
+  const componentStyles = {
+    width: width,
+    height: height
     };
   
     return (
