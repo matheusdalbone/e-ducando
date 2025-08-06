@@ -9,7 +9,7 @@ import { COLORS } from "../../../utils/globalVariables";
 
 const Navbar = () => {
   const scrollOffset = -80;
-  const scrollDuration = 900;
+  const scrollDuration = 200;
 
   return (
     <header className={styles.navbar}>
@@ -19,11 +19,11 @@ const Navbar = () => {
         </RouterLink>
 
         <nav className={styles.navLinks}>
-          <Text as={ScrollLink} to="inicio" smooth={'easeInOutQuint'} duration={scrollDuration} offset={scrollOffset} color={COLORS.PRIMARY_COLOR} >Início</Text>
-          <Text as={ScrollLink} to="beneficios" smooth={'easeInOutQuint'} duration={scrollDuration} offset={scrollOffset} color={COLORS.PRIMARY_COLOR} >Benefícios</Text>
-          <Text as={ScrollLink} to="acesso" smooth={'easeInOutQuint'} duration={scrollDuration} offset={scrollOffset} color={COLORS.PRIMARY_COLOR} >Acesso</Text>
-          <Text as={ScrollLink} to="depoimentos" smooth={'easeInOutQuint'} duration={scrollDuration} offset={scrollOffset} color={COLORS.PRIMARY_COLOR} >Depoimentos</Text>
-          <Text as={ScrollLink} to="contato" smooth={'easeInOutQuint'} duration={scrollDuration} offset={scrollOffset} color={COLORS.PRIMARY_COLOR} >Contato</Text>
+          <Text as={ScrollLink} to="inicio" smooth={'easeInOutCubic'} duration={scrollDuration} offset={scrollOffset} color={COLORS.PRIMARY_COLOR} >Início</Text>
+          <Text as={ScrollLink} to="beneficios" smooth={'easeInOutCubic'} duration={scrollDuration} offset={scrollOffset} color={COLORS.PRIMARY_COLOR} >Benefícios</Text>
+          <Text as={ScrollLink} to="acesso" smooth={'easeInOutCubic'} duration={scrollDuration} offset={scrollOffset} color={COLORS.PRIMARY_COLOR} >Acesso</Text>
+          <Text as={ScrollLink} to="depoimentos" smooth={'easeInOutCubic'} duration={scrollDuration} offset={scrollOffset} color={COLORS.PRIMARY_COLOR} >Depoimentos</Text>
+          <Text as={ScrollLink} to="contato" smooth={'easeInOutCubic'} duration={scrollDuration} offset={scrollOffset} color={COLORS.PRIMARY_COLOR} >Contato</Text>
         </nav>
 
         <Button onClick={() => console.log('Clicou em Começar Agora')} variant="primary-button">Começar Agora</Button>
