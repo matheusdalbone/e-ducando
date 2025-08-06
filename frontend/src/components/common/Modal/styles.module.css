@@ -1,0 +1,8 @@
+.modalSection {
+  background-color: #fff;
+  box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.13);
+  padding: 2rem 2.875rem 2rem 2.875rem;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 2rem;
+}

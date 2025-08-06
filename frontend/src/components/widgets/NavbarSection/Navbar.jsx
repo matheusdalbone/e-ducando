@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className={styles.container}>
         <img src={Icon} alt="E-ducando" style={{height: "29px"}}/>
         <nav className={styles.navLinks}>
-          <Text as={ Link } color={ COLORS.PRIMARY_COLOR } to="/inicio">Início</Text>
+          <Text as={ Link } color={ COLORS.PRIMARY_COLOR } to="/">Início</Text>
           <Text as={ Link } color={ COLORS.PRIMARY_COLOR } to="/beneficios">Benefícios</Text>
           <Text as={ Link } color={ COLORS.PRIMARY_COLOR } to="/acesso">Acesso</Text>
           <Text as={ Link } color={ COLORS.PRIMARY_COLOR } to="/depoimentos">Depoimentos</Text>
