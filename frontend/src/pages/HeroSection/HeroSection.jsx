@@ -1,4 +1,5 @@
 import { Element } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
 
 import styles from "./HeroSection.module.css";
 
@@ -32,7 +33,9 @@ const HeroSection = () => {
 
                     <div className={styles.buttons}>
                         <Button onClick={() => console.log('Clicou em Experimente Agora')} variant="primary-button">Experimente Agora</Button>
-                        <Button onClick={() => console.log('Clicou em Benefícios!')} variant="secondary-button">Benefícios</Button>
+                        <ScrollLink to="beneficios" smooth={'easeInOutCubic'} duration={200} offset={-80}>
+                        <Button variant="secondary-button">Benefícios</Button>
+                        </ScrollLink>
                     </div>
 
                     <ul className={styles.featuresList}>
