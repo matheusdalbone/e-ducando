@@ -6,14 +6,14 @@ import Text from '../../common/Text/Text';
 import Button from '../../common/Button/Button';
 
 import logoIcon from '../../../assets/icons/logo2.svg';
-import loginIcon from '../../../assets/icons/UserIcon.svg';
-import playIcon from '../../../assets/icons/play.svg';
-import lockIcon from '../../../assets/icons/lock.svg';
+import LoginIcon from '../../../assets/icons/UserIcon.svg?react';
+import PlayIcon from '../../../assets/icons/play.svg?react';
+import LockIcon from '../../../assets/icons/lock.svg?react';
 
 const featureCards = [
-    { iconSrc: loginIcon, iconAlt: 'Usuario', title: 'Sem login', description: 'Acesso imediato sem criar conta' },
-    { iconSrc: playIcon, iconAlt: 'Botão de play', title: 'Navegação completa', description: 'Explore todas as funcionalidades' },
-    { iconSrc: lockIcon, iconAlt: 'Icone de um cadeado', title: '100% Seguro', description: 'Ambiente protegido para testes' }
+    { Icon: LoginIcon, iconAlt: 'Usuario', title: 'Sem login', description: 'Acesso imediato sem criar conta' },
+    { Icon: PlayIcon, iconAlt: 'Botão de play', title: 'Navegação completa', description: 'Explore todas as funcionalidades' },
+    { Icon: LockIcon, iconAlt: 'Icone de um cadeado', title: '100% Seguro', description: 'Ambiente protegido para testes' }
 ];
 
 const TrialCardSection = ({ title = 'Experimente nossa plataforma', cards = featureCards }) => (
@@ -28,10 +28,10 @@ const TrialCardSection = ({ title = 'Experimente nossa plataforma', cards = feat
             <Text as="p" lineHeight="24px" weight="400" size="18px" color={COLORS.NEUTRAL_COLOR}>Teste todas as funcionalidades do E-ducando sem compromisso! Não precisa de cadastro ou login para experimentar!</Text>
            
             <div className={styles.cardsGrid}>
-                {cards.map(({ iconSrc, iconAlt, title, description }, idx) => (
+                {cards.map(({ Icon, iconAlt, title, description }, idx) => (
                     <TrialCardModal
                         key={idx}
-                        iconSrc={iconSrc}
+                        Icon={Icon}
                         iconAlt={iconAlt}
                         title={title}
                         description={description}

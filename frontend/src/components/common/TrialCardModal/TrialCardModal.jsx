@@ -5,11 +5,11 @@ import Text from '../Text/Text';
 import Button from '../Button/Button';
 import { COLORS } from '../../../utils/globalVariables';
 
-const TrialCardModal = ({ iconSrc, iconAlt, title, description, hideButton = false }) => {
+const TrialCardModal = ({ Icon, iconAlt, title, description, hideButton = false }) => {
   return (
     <div className={styles.trialCard}>
       <div className={styles.iconWrapper}>
-        <img src={iconSrc} alt={iconAlt} size={60} />
+        <Icon alt={iconAlt} className={styles.cardIcon} />
       </div>
       <Text as='h3' color={COLORS.BLACK_COLOR}>{title}</Text>
       <Text as='p' color={COLORS.BLACK_COLOR}>{description}</Text>
