@@ -12,3 +12,33 @@
   align-self: flex-start;
   gap: 1.125rem;
 }
+
+@media (max-width: 768px) {
+  .titleContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .formContainer {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .formContainer div {
+    max-width: 248px;
+  }
+
+  .formContainer span {
+    font-size: 12px;
+  }
+
+  .formContainer button {
+    max-width: 12.9375rem;
+  }
+
+  .contactContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

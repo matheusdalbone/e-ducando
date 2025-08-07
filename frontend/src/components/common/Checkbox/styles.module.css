@@ -8,7 +8,7 @@
 }
 
 .customCheckbox input {
-  display: none; /* Hide the default checkbox */
+  display: none;
 }
 
 .customCheckbox .checkmark {

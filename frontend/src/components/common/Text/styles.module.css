@@ -1,5 +1,6 @@
 .default {
     line-height: 2.625rem;
+    color: var(--PRIMARY_COLOR);
 }
 
 @media (max-width: 600px) {

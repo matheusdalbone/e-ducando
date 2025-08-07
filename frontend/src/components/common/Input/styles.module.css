@@ -6,7 +6,7 @@
 }
 
 .input {
-  background-color: var(--background-color);
+  background-color: var(--BACKGROUND_COLOR);
   border-radius: .5625rem;
   border-style: solid;
   border-width: .125rem;

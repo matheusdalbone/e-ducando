@@ -11,7 +11,7 @@ import RatingSection from "../../components/widgets/RatingSection/RatingSection"
 import BenefitsSection from "../../components/widgets/BenefitsSection/BenefitsSection";
 import TrialCardSection from "../../components/widgets/TrialCardSection/TrialCardSection";
 import Layout from "../../components/common/Layout/Layout";
-import ContactFormWidget from "../../components/widgets/Forms/ContactFormWidget/ContactFormWidget";
+import ContactSection from "../../components/widgets/ContactSection/ContactSection";
 
 
 const HeroSection = () => {
@@ -56,16 +56,17 @@ const HeroSection = () => {
             <BenefitsSection />
             </Element>
 
-            <Element name="acesso">
+            <Element name="depoimentos">
             <RatingSection></RatingSection>
             </Element>
-
-            <Element name="depoimentos">
+            
+            <Element name="acesso">
             <TrialCardSection></TrialCardSection>
             </Element>
 
+
             <Element name="contato">
-            <ContactFormWidget></ContactFormWidget>
+            <ContactSection></ContactSection>
             </Element>
             
         </Layout>
