@@ -1,5 +1,5 @@
 import { Link as ScrollLink } from 'react-scroll';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link, Link as RouterLink } from 'react-router-dom';
 import styles from "./Navbar.module.css";
 
 import Text from "../../common/Text/Text";
@@ -26,7 +26,9 @@ const Navbar = () => {
           <Text as={ScrollLink} to="contato" smooth={'easeInOutCubic'} duration={scrollDuration} offset={scrollOffset} color={COLORS.PRIMARY_COLOR} >Contato</Text>
         </nav>
 
-        <Button onClick={() => console.log('Clicou em Começar Agora')} variant="primary-button">Começar Agora</Button>
+        <Link to="loginPage">
+          <Button onClick={() => console.log('Clicou em Começar Agora')} variant="primary-button">Começar Agora</Button>
+        </Link>
       </div>
     </header>
   );

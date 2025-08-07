@@ -1,4 +1,5 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
+
 import styles from './styles.module.css';
 import TrialCardModal from '../../common/TrialCardModal/TrialCardModal';
 import { COLORS } from '../../../utils/globalVariables';
@@ -41,9 +42,11 @@ const TrialCardSection = ({ title = 'Experimente nossa plataforma', cards = feat
             </div>
 
             <div className={styles.mainButtonWrapper}>
-                <Button variant="primary-button" onClick={() => console.log('Clicou em Iniciar simulação gratuita')}>
+                <Link to="/pageWithoutLogin">
+                <Button onClick={() => console.log('Clicou em Iniciar simulação gratuita')} variant="primary-button">
                     Iniciar simulação gratuita
                 </Button>
+                </Link>
             </div>
         </div>
     </section>
