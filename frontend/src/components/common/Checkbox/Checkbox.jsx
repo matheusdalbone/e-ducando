@@ -11,7 +11,7 @@ const Checkbox = ({ title }) => {
       <label className={ styles.customCheckbox }>
         <input type="checkbox"/>
         <span className={ styles.checkmark }></span>
-        <Text as='span' weight='700' size='12px' color={COLORS.NEUTRAL_COLOR} opacity='0.8'>{ title }</Text>
+        <Text as='span' weight='700' size='12px' color={COLORS.NEUTRAL_COLOR} opacity='0.8' lineHeight="16px">{ title }</Text>
       </label>
     </div>
   )
