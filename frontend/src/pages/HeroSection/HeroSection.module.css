@@ -91,6 +91,7 @@
     .hero {
         flex-direction: column;
         padding: 1rem;
+        padding-top: 120px;
     }
 
     .content {

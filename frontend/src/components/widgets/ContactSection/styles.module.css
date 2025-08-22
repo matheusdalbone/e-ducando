@@ -12,7 +12,6 @@
 .container {
   display: flex;
   gap: 126px;
-  width: 1245px;
 }
 
 .titleSection {
