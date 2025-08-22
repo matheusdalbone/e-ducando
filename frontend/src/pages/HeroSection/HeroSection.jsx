@@ -63,14 +63,13 @@ const HeroSection = () => {
                 <BenefitsSection />
             </Element>
 
-            <Element name="depoimentos">
-                <RatingSection></RatingSection>
-            </Element>
-
             <Element name="acesso">
                 <TrialCardSection></TrialCardSection>
             </Element>
 
+            <Element name="depoimentos">
+                <RatingSection></RatingSection>
+            </Element>
 
             <Element name="contato">
                 <ContactSection></ContactSection>

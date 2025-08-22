@@ -37,7 +37,7 @@ const ContactUsModal = () => {
         </svg>
         <div className={styles.textContainer}>
           <Text as="span" weight="700" size="12px" lineHeight="12px">Endereço</Text>
-          <Text as="span" weight="700" size="12px" lineHeight="12px" color={COLORS.NEUTRAL_COLOR} opacity="0.6">São paulo/SP - Brasil</Text>
+          <Text as="span" weight="700" size="12px" lineHeight="12px" color={COLORS.NEUTRAL_COLOR} opacity="0.6">São Paulo/SP - Brasil</Text>
         </div>
       </div>
     </div>
