@@ -19,13 +19,13 @@
   margin-right: 10px;
   position: relative;
   transition: background-color 0.3s ease;
-  border: solid var(--PRIMARY_COLOR);
+  border: solid var(--QUATERNARY_COLOR);
   border-width: 2px;
   border-radius: 50%;
 }
 
 .customCheckbox input:checked + .checkmark {
-  background-color: var(--PRIMARY_COLOR);
+  background-color: var(--QUATERNARY_COLOR);
 }
 
 .customCheckbox .checkmark::after {

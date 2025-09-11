@@ -1,4 +1,5 @@
 .formsSection {
+  background-color: var(--ANOTHERBACK_COLOR);
   display: flex;
   flex-direction: column;
   align-items: center;

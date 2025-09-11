@@ -1,5 +1,5 @@
 .cardsSection {
-  background-color: #f7f0fb;
+  background-color: var(--WHITE_COLOR);
   padding: 60px 20px;
   display: flex;
   justify-content: center;
@@ -12,7 +12,7 @@
   max-width: 1200px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .cardsGrid {

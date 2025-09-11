@@ -12,7 +12,7 @@ const ContactSection = () => {
   return (
     <section className={styles.formsSection}>
       <div className={styles.titleSection}>
-        <Text weight="700" size="32px" color={ COLORS.PRIMARY_COLOR }>Formulário de Contato</Text>
+        <Text weight="700" size="32px" color={ COLORS.TERCIARY_COLOR }>Formulário de Contato</Text>
         <Text weight="400" size="20px" lineHeight="32px" color={ COLORS.NEUTRAL_COLOR } opacity="0.5">Tem dúvidas? Entre em contato com a nossa equipe</Text>
       </div>
       <div className={styles.container}>

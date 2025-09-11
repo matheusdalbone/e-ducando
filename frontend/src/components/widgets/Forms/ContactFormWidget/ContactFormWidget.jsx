@@ -20,7 +20,7 @@ const ContactFormWidget = () => {
   return (
     <Modal>
       <div className={ styles.titleContainer }>
-        <Text weight='700' size='20px' color={ COLORS.PRIMARY_COLOR }>Envie sua mensagem</Text>
+        <Text weight='700' size='20px' color={ COLORS.TERCIARY_COLOR }>Envie sua mensagem</Text>
       </div>
       <form className={ styles.formContainer } onSubmit={handleSubmit}>
         <div className={ styles.contactContainer }>
