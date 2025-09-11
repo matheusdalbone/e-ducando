@@ -1,13 +1,42 @@
 .ratingSection {
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 2%;
   background-color: var(--BACKGROUND_COLOR);
-  max-height: 47.375rem;
-  height: 48rem;
+}
+
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.videoBackground video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contentOverlay {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 3.375rem;
-  padding: 1rem 2rem;
+  gap: 3rem;
+}
+
+.videoBackground::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 7, 53, 0.1);
 }
 
 .ratingsGrid {
