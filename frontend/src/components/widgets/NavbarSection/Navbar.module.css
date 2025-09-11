@@ -10,7 +10,7 @@
   box-shadow: none;
   border: none;
 
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease;
 
   display: flex;
   align-items: center;
@@ -18,7 +18,7 @@
 }
 
 .navbar-scrolled {
-  background-color: #3f2a56;
+  background-color: var(--TERCIARY_COLOR);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 

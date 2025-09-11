@@ -49,8 +49,8 @@ const HeroSection = () => {
                         </ul>
                     </div>
 
-                    <div className={styles.imageWrapper}>
-                        <video autoPlay loop muted playsInline className={styles.heroImage}>
+                    <div className={styles.videoWrapper}>
+                        <video autoPlay loop muted playsInline className={styles.videoImage}>
                             <source src={HeroIllustration} type="video/mp4" />
 
                             {/* Você pode adicionar outros formatos para maior compatibilidade */}
