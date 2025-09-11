@@ -9,7 +9,7 @@
 }
 
 .primary {
-  background-color: var(--PRIMARY_COLOR);
+  background-color: var(--QUATERNARY_COLOR);
   color: var(--WHITE_COLOR);
 }
 

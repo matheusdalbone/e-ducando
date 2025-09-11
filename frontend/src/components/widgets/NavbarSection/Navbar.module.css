@@ -1,15 +1,25 @@
 .navbar {
-  width: 100vw;
   position: fixed;
-  background-color: #E8DFEA;
-  color: var(--WHITE_COLOR);
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 100;
   padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  box-shadow: none;
+  border: none;
+
+  transition: background-color 0.3s ease-in-out;
+
   display: flex;
-  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  z-index: 1;
+}
+
+.navbar-scrolled {
+  background-color: #3f2a56;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .container {
@@ -28,7 +38,7 @@
 }
 
 .navLinks a {
-  color: var(--PRIMARY_COLOR);
+  color: var(--WHITE_COLOR);
   text-decoration: none;
   font-weight: 500;
   transition: opacity 0.2s;
@@ -37,6 +47,10 @@
 
 .navLinks a:hover {
   opacity: 0.75;
+}
+
+.logo-branco {
+  filter: grayscale(1) brightness(0) invert(1);
 }
 
 @media (max-width: 768px) {

@@ -1,20 +1,20 @@
 import React from 'react';
 import styles from './styles.module.css';
-import UserIcon from '../../../assets/icons/UserIcon.svg';
+import DefaultUserIcon from '../../../assets/icons/UserIcon.svg';
 import Text from '../Text/Text';
 import RatingStars from '../RatingStars/RatingStars';
 import { COLORS } from '../../../utils/globalVariables';
 
-const RatingModal = ({ name, rating, description, comment }) => {
+const RatingModal = ({ icon = DefaultUserIcon, name, rating, description, comment }) => {
 
   return (
     <div className={ styles.modal }>
       <div className={ styles.imageWrapper }>
-        <img src={ UserIcon } alt="Icone do Usuario"/>
+        <img src={ icon } alt="Icone do Usuario"/>
       </div>
       <div className={styles.container}>
         <RatingStars rating={ rating }></RatingStars>
-        <Text as='p' lineHeight='130%' size='1.1875rem'>
+        <Text as='p' lineHeight='130%' size='1.1875rem' color={ COLORS.NEUTRAL_COLOR}>
           { comment }
         </Text>
         <div className={styles.nameContainer}>

@@ -6,7 +6,7 @@ const Layout = ({ children } ) => {
   return (
     <>
       <Navbar></Navbar>
-      <main style={{paddingTop: '70px'}}>
+      <main style={{paddingTop: '0px'}}>
         { children }
       </main>
       {/* Componente do Footer */}

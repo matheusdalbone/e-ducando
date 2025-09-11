@@ -27,7 +27,7 @@
 }
 
 .cardIcon path {
-  fill: black;
+  fill: var(--QUATERNARY_COLOR);
 }
 
 .trialCard h3 {

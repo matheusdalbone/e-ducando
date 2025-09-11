@@ -8,7 +8,7 @@ import { COLORS } from "../../utils/globalVariables";
 
 import Text from "../../components/common/Text/Text";
 import Button from "../../components/common/Button/Button";
-import HeroIllustration from "../../assets/images/hero-illustration.png";
+import HeroIllustration from "../../assets/gifs/character.mp4";
 import RatingSection from "../../components/widgets/RatingSection/RatingSection";
 import BenefitsSection from "../../components/widgets/BenefitsSection/BenefitsSection";
 import TrialCardSection from "../../components/widgets/TrialCardSection/TrialCardSection";
@@ -23,7 +23,7 @@ const HeroSection = () => {
                 <section className={styles.hero}>
                     <div className={styles.content}>
                         <div className={styles.textSection}>
-                            <Text as="h1" size="64px" weight="700" color={COLORS.PRIMARY_COLOR} lineHeight="60px">
+                            <Text as="h1" size="64px" weight="700" color={COLORS.TERCIARY_COLOR} lineHeight="60px">
                                 Transforme seu <br></br>
                                 <Text as="span" color={COLORS.SECONDARY_COLOR}> Aprendizado</Text>
                             </Text>
@@ -50,11 +50,15 @@ const HeroSection = () => {
                     </div>
 
                     <div className={styles.imageWrapper}>
-                        <img
-                            src={HeroIllustration}
-                            alt="Ilustração de estudante usando computador"
-                            className={styles.heroImage}
-                        />
+                        <video autoPlay loop muted playsInline className={styles.heroImage}>
+                            <source src={HeroIllustration} type="video/mp4" />
+
+                            {/* Você pode adicionar outros formatos para maior compatibilidade */}
+                            {/* <source src={OutroFormatoDeVideo} type="video/webm" /> */}
+
+                            {/* Este texto aparece se o navegador não conseguir exibir o vídeo */}
+                            Ilustração de dois estudantes que estão formando.
+                        </video>
                     </div>
                 </section>
             </Element>
@@ -62,7 +66,7 @@ const HeroSection = () => {
             <Element name="beneficios">
                 <BenefitsSection />
             </Element>
-            
+
             <Element name="depoimentos">
                 <RatingSection></RatingSection>
             </Element>

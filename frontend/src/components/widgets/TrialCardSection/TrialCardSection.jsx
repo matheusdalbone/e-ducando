@@ -25,7 +25,7 @@ const TrialCardSection = ({ title = 'Experimente nossa plataforma', cards = feat
                 <img src={logoIcon} alt="Logo da Plataforma" className={styles.logoImage} />
             </div>
 
-            <Text as="h1" size="40px" weight="700" color={COLORS.PRIMARY_COLOR} lineHeight="60px">{title}</Text>
+            <Text as="h1" size="40px" weight="700" color={COLORS.QUATERNARY_COLOR} lineHeight="60px">{title}</Text>
             <Text as="p" lineHeight="24px" weight="400" size="18px" color={COLORS.NEUTRAL_COLOR}>Teste todas as funcionalidades do E-ducando sem compromisso! Não precisa de cadastro ou login para experimentar!</Text>
            
             <div className={styles.cardsGrid}>

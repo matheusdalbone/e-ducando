@@ -10,7 +10,7 @@ const TrialCardModal = ({ Icon, iconAlt, title, description}) => {
       <div className={styles.iconWrapper}>
         <Icon alt={iconAlt} className={styles.cardIcon} />
       </div>
-      <Text as='h3' color={COLORS.BLACK_COLOR}>{title}</Text>
+      <Text as='h3' color={COLORS.TERCIARY_COLOR}>{title}</Text>
       <Text as='p' color={COLORS.BLACK_COLOR}>{description}</Text>
     </div>
 
