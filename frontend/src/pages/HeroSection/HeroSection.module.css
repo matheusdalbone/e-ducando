@@ -4,7 +4,6 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 0px 0px;
     background-color: var(--BACKGROUND_COLOR);
     width: 100%;
     min-height: 800px;
