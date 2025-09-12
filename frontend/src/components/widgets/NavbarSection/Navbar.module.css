@@ -18,8 +18,8 @@
 
 .navbarScrolled {
   background-color: rgba(33, 0, 93, 0.2);
-  backdrop-filter: blur(10px); 
-  -webkit-backdrop-filter: blur(10px); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -56,39 +56,85 @@
   filter: grayscale(1) brightness(0) invert(1);
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    flex-wrap: wrap;
-    padding: 1rem 1rem;
-  }
-
-  .container {
-    margin: 0 4%;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navLinks {
-    width: 100%;
-    justify-content: center;
-    gap: 1.2rem;
-    margin-top: 0.5rem;
-    flex-wrap: wrap;
-  }
-
-  .menu {
-    flex-basis: 100%;
-    justify-content: center;
-    margin-top: 0.5rem;
-  }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
 }
 
-@media (max-width: 480px) {
-  .navLinks {
-    gap: 0.8rem;
+.bar {
+  width: 2rem;
+  height: 0.25rem;
+  background: white;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger.open .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.mobileButton {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  .desktopButton {
+    display: none;
   }
 
-  .navLinks a {
-    font-size: 0.9rem;
+  .navLinks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Use 100% em vez de 100vw para evitar barras de scroll inesperadas */
+    height: 100vh;
+    background: rgba(33, 0, 93, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 5;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+
+    /* CORREÇÃO AQUI: Usamos visibility e opacity em vez de display */
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0.4s;
+  }
+
+  .navLinks.open {
+    /* Mostra o menu e traz para a posição final */
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .mobileButton {
+    display: block;
+  }
+
+  .hamburger {
+    display: flex;
+    z-index: 10; /* Garante que o botão fique sempre sobre o menu */
   }
 }
