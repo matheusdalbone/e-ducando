@@ -11,7 +11,7 @@ const BenefitsItem = ({ iconSrc, iconAlt, title, description }) => {
                 <img src={iconSrc} alt={iconAlt} size={60} />
             </div>
             <Text as='h3' color={COLORS.TERCIARY_COLOR}>{title}</Text>
-            <Text as='p' color={COLORS.NEUTRAL_COLOR}>{description}</Text>
+            <Text as='p' color={COLORS.NEUTRAL_COLOR} size={'16px'}>{description}</Text>
         </div>
     );
 };

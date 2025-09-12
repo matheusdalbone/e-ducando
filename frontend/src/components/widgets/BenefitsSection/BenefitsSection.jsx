@@ -13,12 +13,12 @@ import clockIcon from '../../../assets/icons/clock.svg';
 
 
 const defaultBenefits = [
-    { iconSrc: targetIcon, iconAlt: 'Alvo', title: 'Objetivos Personalizados', description: 'Defina metas únicas e acompanhe seu progresso no seu ritmo.' },
-    { iconSrc: usersIcon, iconAlt: 'Grupo de usuários', title: 'Aprendizado Colaborativo', description: 'Conecte-se com outros alunos e cresça com o trabalho em grupo.' },
-    { iconSrc: progressIcon, iconAlt: 'Pequeno gráfico', title: 'Acompanhe seu Progresso', description: 'Visualize seu avanço com relatórios e estatísticas.' },
-    { iconSrc: bookIcon, iconAlt: 'Livro', title: 'Materiais Interativos', description: 'Acesse conteúdos atualizados e práticos.' },
-    { iconSrc: calendarIcon, iconAlt: 'Calendário', title: 'Calendário Interativo', description: 'Planeje com antecedência com datas de entrega e prazos.' },
-    { iconSrc: clockIcon, iconAlt: 'Relógio', title: 'Gestão de Tempo', description: 'Otimize seu tempo com ferramentas de organização.' },
+    { iconSrc: targetIcon, iconAlt: 'Alvo', title: 'Objetivos Personalizados', description: 'Defina metas e receba um plano de estudos adaptado ao seu ritmo.' },
+    { iconSrc: usersIcon, iconAlt: 'Grupo de usuários', title: 'Aprendizado Colaborativo', description: 'Conecte-se com outros estudantes e aprenda em grupo de forma colaborativa.' },
+    { iconSrc: progressIcon, iconAlt: 'Pequeno gráfico', title: 'Acompanhe seu Progresso', description: 'Monitore seu desenvolvimento com relatórios detalhados.' },
+    { iconSrc: bookIcon, iconAlt: 'Livro', title: 'Materiais Interativos', description: 'Acesse conteúdos educacionais de alta qualidade.' },
+    { iconSrc: calendarIcon, iconAlt: 'Calendário', title: 'Agenda Inteligente', description: 'Gerencie prazos, provas e compromissos com facilidade.' },
+    { iconSrc: clockIcon, iconAlt: 'Relógio', title: 'Gestão de Tempo', description: 'Otimize sua rotina com ferramentas de controle de tempo de estudo.' },
 ];
 
 const BenefitsSection = ({ title = 'Por que escolher o E-ducando', benefits = defaultBenefits }) => (

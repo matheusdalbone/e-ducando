@@ -33,6 +33,7 @@
 .benefitsCard p {
   font-size: 0.9rem;
   line-height: 1.5;
+  padding: 12px 8px 22px 8px;
 }
 
 @media (hover: none) and (pointer: coarse) {

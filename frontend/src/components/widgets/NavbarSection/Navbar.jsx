@@ -28,11 +28,10 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navbarClasses = `${styles.navbar} ${scrolled ? styles.navbarScrolled : ''}`;
-
+  const navbarClasses = scrolled ? `${styles.navbar} ${styles.navbarScrolled}` : styles.navbar;
 
   return (
-    <header className={styles.navbar}>
+    <header className={navbarClasses}>
       <div className={styles.container}>
         <RouterLink to="/">
           <img src={Icon} alt="E-ducando" className="logo-branco" style={{ height: "30px" }} />
@@ -43,7 +42,6 @@ const Navbar = () => {
           <Text as={ScrollLink} to="beneficios" smooth={'easeInOutCubic'} duration={scrollDuration} offset={scrollOffset} color={COLORS.WHITE_COLOR} >Benefícios</Text>
           <Text as={ScrollLink} to="depoimentos" smooth={'easeInOutCubic'} duration={scrollDuration} offset={scrollOffset} color={COLORS.WHITE_COLOR} >Depoimentos</Text>
           <Text as={ScrollLink} to="acesso" smooth={'easeInOutCubic'} duration={scrollDuration} offset={scrollOffset} color={COLORS.WHITE_COLOR} >Acesso</Text>
-          <Text as={ScrollLink} to="contato" smooth={'easeInOutCubic'} duration={scrollDuration} offset={scrollOffset} color={COLORS.WHITE_COLOR} >Contato</Text>
         </nav>
 
         <RouterLink to="loginPage">

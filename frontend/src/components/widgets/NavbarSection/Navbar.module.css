@@ -3,7 +3,6 @@
   width: 100%;
   top: 0;
   left: 0;
-  background-color: transparent;
   z-index: 100;
   padding: 1rem 2rem;
 
@@ -17,8 +16,10 @@
   justify-content: space-between;
 }
 
-.navbar-scrolled {
-  background-color: var(--TERCIARY_COLOR);
+.navbarScrolled {
+  background-color: rgba(33, 0, 93, 0.2);
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -34,7 +35,9 @@
 
 .navLinks {
   display: flex;
-  gap: 2rem;
+  gap: 3.2rem;
+  font-family: Raleway;
+  font-weight: 500;
 }
 
 .navLinks a {
