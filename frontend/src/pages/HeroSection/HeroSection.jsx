@@ -14,11 +14,19 @@ import BenefitsSection from "../../components/widgets/BenefitsSection/BenefitsSe
 import TrialCardSection from "../../components/widgets/TrialCardSection/TrialCardSection";
 import Layout from "../../components/common/Layout/Layout";
 import ContactSection from "../../components/widgets/ContactSection/ContactSection";
+import FormModal from '../../components/common/FormModal/FormModal';
+import Modal from "react-modal";
+
+import { useState } from 'react';
 
 
 const HeroSection = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
         <Layout>
+            <FormModal isOpen={isModalOpen} onClick={() => setIsModalOpen(false)} />
+
             <Element name="inicio">
                 <section className={styles.hero}>
                     <div className={styles.content}>
@@ -33,10 +41,7 @@ const HeroSection = () => {
                         </div>
 
                         <div className={styles.buttons}>
-                            <Link to="/loginPage">
-                                <Button variant="primary-button">Experimente Agora</Button>
-                            </Link>
-
+                            <Button variant="primary-button" onClick={() => setIsModalOpen(true)}>Experimente Agora</Button>
                             <ScrollLink to="beneficios" smooth={'easeInOutCubic'} duration={200} offset={-80}>
                                 <Button variant="secondary-button">Benefícios</Button>
                             </ScrollLink>
@@ -78,7 +83,6 @@ const HeroSection = () => {
             <Element name="contato">
                 <ContactSection></ContactSection>
             </Element>
-
         </Layout>
     );
 };

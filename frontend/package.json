@@ -12,6 +12,7 @@
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.1",
+    "react-modal": "^3.16.3",
     "react-router": "^7.7.1",
     "react-router-dom": "^7.7.1",
     "react-scroll": "^1.9.3"

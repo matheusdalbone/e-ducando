@@ -1,0 +1,61 @@
+.modalContainer {
+  height: 200px;
+  width: 200px;
+  border-radius: 25PX;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  z-index: 100;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topSection {
+  background-color: var(--QUATERNARY_COLOR);
+  width: 100%;
+  height: 40%;
+
+  border-radius: 25px 25px 0 0;
+}
+
+.bottomSection {
+  background-color: var(--WHITE_COLOR);
+  width: 100%;
+  height: 60%;
+
+  border-radius: 0 0 25px 25px;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.73);
+
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+  z-index: 100;
+}
+
+.closeBtn {
+  border: 0;
+  color: rgba(166, 151, 209, 1);
+
+  background-color: transparent;
+  padding: 0;
+
+  position: fixed;
+  right: 20px;
+  top: 20px;
+
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.closeBtn:hover {
+  transform: scale(1.2);
+  color: var(--WHITE_COLOR);
+}
