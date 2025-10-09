@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router';
 
 import HeroSection from '../../pages/HeroSection/HeroSection';
 import PageError from '../../components/widgets/PageError/PageError';
+import TestPageSection from '../../pages/TestPageSection/TestPageSection';
 
 const RoutesApp = () => {
 
@@ -11,6 +12,7 @@ const RoutesApp = () => {
       <Route path="/" element={ <HeroSection />} />
       <Route path="/pageWithoutLogin" element={<PageError pageName="Página Sem Login" />} />
       <Route path="/loginPage" element={<PageError pageName="Página de Login" />} />
+      <Route path="/testPage" element={<TestPageSection pageName="Página de Teste" />} />
     </Routes>
   );
 }

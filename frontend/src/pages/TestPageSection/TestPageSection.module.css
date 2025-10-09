@@ -1,0 +1,127 @@
+.pageContentWrapper {
+  padding-top: 80px;
+}
+
+.alertBanner {
+  background-color: var(--WARNING_COLOR);
+  color: var(--ERROR_COLOR);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 14px;
+}
+.alertBanner a {
+  font-weight: 600;
+  color: var(--ERROR_COLOR);
+  text-decoration: underline;
+}
+
+.pageWrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.pageHeader { 
+    text-align: center; 
+    padding: 48px 0; 
+    background-color: var(--SECBACKGROUND_COLOR); 
+}
+.mainTitle { 
+    font-size: 48px; 
+    font-weight: 700; 
+    margin-bottom: 16px; 
+    color: var(--BLACK_COLOR);
+}
+.highlight { 
+    color: #4f46e5; 
+}
+
+.subtitle { 
+    font-size: 18px; 
+    color: var(--NEUTRAL_COLOR); 
+    max-width: 600px; 
+    margin: 0 auto; 
+}
+
+.contentSection { 
+  padding: 48px 0; 
+  text-align: center; 
+  border-top: 1px solid #e5e7eb; 
+}
+
+.contentSection h2 { 
+  font-size: 36px; 
+  font-weight: 700; 
+  margin-bottom: 16px; 
+}
+
+.contentSection p { 
+  font-size: 16px; 
+  color: #4b5563; 
+  margin-bottom: 40px; 
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  text-align: left;
+}
+.viewAllButton {
+  margin-top: 40px;
+  padding: 12px 24px;
+  background-color: var(--PREMIUM_COLOR);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ctaBanner {
+  background: linear-gradient(180deg, #6750A4FA 0%, #6E5CE6A6 45%);
+  color: var(--WHITE_COLOR);
+  text-align: center;
+  padding: 64px 24px;
+  margin-top: 48px;
+  border-radius: 30px;
+  margin-bottom: 48px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ctaBanner h2 { 
+    font-size: 36px; 
+    margin-bottom: 16px; 
+}
+
+.ctaBanner p { 
+    font-size: 18px; 
+    max-width: 600px; 
+    margin: 0 auto 32px; 
+    opacity: 0.9; 
+}
+
+.ctaBanner button {
+  background-color: var(--TERCIARY_COLOR);
+  color: var(--WHITE_COLOR);
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 900px) { 
+    .grid { grid-template-columns: repeat(2, 1fr); } 
+}
+@media (max-width: 600px) { 
+    .grid { grid-template-columns: 1fr; } 
+}

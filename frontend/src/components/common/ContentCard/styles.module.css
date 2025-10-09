@@ -1,0 +1,69 @@
+.card {
+  background-color: var(--CARD_COLOR);
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.iconWrapper { 
+  font-size: 24px; color: var(----TERCIARY_COLOR); 
+}
+
+.duration {
+  font-size: 14px;
+  color: var(--NEUTRAL_COLOR);
+  background-color: var(--CARD_COLOR);
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.body { 
+  flex-grow: 1; 
+}
+
+.title { 
+  font-size: 18px; font-weight: 600; color: #111827; margin: 0 0 8px; 
+}
+
+.description { 
+  font-size: 14px; color: #4b5563; line-height: 1.5; 
+}
+
+.footer { 
+  margin-top: 24px; 
+}
+
+.primaryButton, .premiumButton {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.primaryButton { 
+  background-color: var(--TERCIARY_COLOR); color: white; 
+}
+.premiumButton { 
+  background-color: var(--PREMIUM_COLOR); color: white; 
+}

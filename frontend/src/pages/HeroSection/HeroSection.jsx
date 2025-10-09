@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { Element } from 'react-scroll';
 import { Link as ScrollLink } from 'react-scroll';
 import { Link } from 'react-router-dom';
@@ -14,9 +15,15 @@ import BenefitsSection from "../../components/widgets/BenefitsSection/BenefitsSe
 import TrialCardSection from "../../components/widgets/TrialCardSection/TrialCardSection";
 import Layout from "../../components/common/Layout/Layout";
 import ContactSection from "../../components/widgets/ContactSection/ContactSection";
+import TrialSignupSection from "../../components/widgets/TrialSignupSection/TrialSignupSection";
 
 
 const HeroSection = () => {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleCloseModal = () => setIsModalOpen(false);
+
     return (
         <Layout>
             <Element name="inicio">
@@ -33,9 +40,9 @@ const HeroSection = () => {
                         </div>
 
                         <div className={styles.buttons}>
-                            <Link to="/loginPage">
-                                <Button variant="primary-button">Experimente Agora</Button>
-                            </Link>
+                            <Button variant="primary-button" onClick={() => setIsModalOpen(true)}>
+                            Experimente Agora
+                            </Button>
 
                             <ScrollLink to="beneficios" smooth={'easeInOutCubic'} duration={200} offset={-80}>
                                 <Button variant="secondary-button">Benefícios</Button>
@@ -78,6 +85,8 @@ const HeroSection = () => {
             <Element name="contato">
                 <ContactSection></ContactSection>
             </Element>
+
+            <TrialSignupSection isOpen={isModalOpen} onClose={handleCloseModal} />
 
         </Layout>
     );
