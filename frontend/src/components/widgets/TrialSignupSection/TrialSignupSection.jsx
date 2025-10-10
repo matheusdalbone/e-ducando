@@ -28,8 +28,7 @@ const TrialSignupSection = ({ isOpen, onClose }) => {
 
           <Text as="h3" size="36px" weight="602" color={COLORS.WHITE_COLOR} lineHeight="30px">Comece sua Experiência Gratuita</Text>
           <Text as='p' lineHeight='1.5' size='20px' color={COLORS.WHITE_COLOR}>
-            Acesse uma prévia de nossos materiais por 7 dias. Não precisa <br />
-            de cartão de crédito.
+            Acesse uma prévia de nossos materiais por 7 dias. Não precisa de cartão de crédito.
           </Text>
         </div>
 

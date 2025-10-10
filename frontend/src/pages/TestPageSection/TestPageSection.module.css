@@ -1,8 +1,13 @@
 .pageContentWrapper {
-  padding-top: 80px;
+  position: relative;
 }
 
 .alertBanner {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
   background-color: var(--WARNING_COLOR);
   color: var(--ERROR_COLOR);
   padding: 16px;
@@ -11,7 +16,9 @@
   justify-content: center;
   gap: 12px;
   font-size: 14px;
+  box-sizing: border-box;
 }
+
 .alertBanner a {
   font-weight: 600;
   color: var(--ERROR_COLOR);
@@ -25,43 +32,46 @@
 }
 
 .pageHeader { 
-    text-align: center; 
-    padding: 48px 0; 
-    background-color: var(--SECBACKGROUND_COLOR); 
-}
-.mainTitle { 
-    font-size: 48px; 
-    font-weight: 700; 
-    margin-bottom: 16px; 
-    color: var(--BLACK_COLOR);
-}
-.highlight { 
-    color: #4f46e5; 
-}
-
-.subtitle { 
-    font-size: 18px; 
-    color: var(--NEUTRAL_COLOR); 
-    max-width: 600px; 
-    margin: 0 auto; 
+  text-align: center; 
+  padding: 220px 0 200px 0; 
+  background-color: var(--SECBACKGROUND_COLOR); 
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 .contentSection { 
   padding: 48px 0; 
-  text-align: center; 
   border-top: 1px solid #e5e7eb; 
+  text-align: center;
+}
+
+.contentSection:first-child {
+  border-top: none;
+}
+
+.pageHeader h1 {
+  font-size: 64px !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
+  margin-bottom: 60px;
 }
 
 .contentSection h2 { 
   font-size: 36px; 
   font-weight: 700; 
   margin-bottom: 16px; 
+  text-align: center;
 }
 
 .contentSection p { 
   font-size: 16px; 
   color: #4b5563; 
   margin-bottom: 40px; 
+  text-align: center;
 }
 
 .grid {
@@ -70,6 +80,7 @@
   gap: 24px;
   text-align: left;
 }
+
 .viewAllButton {
   margin-top: 40px;
   padding: 12px 24px;
@@ -94,13 +105,12 @@
   margin-right: auto;
 }
 .ctaBanner h2 { 
-    font-size: 36px; 
+    font-size: 48px; 
     margin-bottom: 16px; 
 }
 
 .ctaBanner p { 
-    font-size: 18px; 
-    max-width: 600px; 
+    max-width: 750px; 
     margin: 0 auto 32px; 
     opacity: 0.9; 
 }

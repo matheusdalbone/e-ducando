@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './styles.module.css';
 import { FaLock } from 'react-icons/fa';
-import { COLORS } from '../../../utils/globalVariables';
 
 const ContentCard = ({ icon, title, description, duration, isPremium = false }) => {
   return (
