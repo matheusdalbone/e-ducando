@@ -67,7 +67,6 @@ const TrialSignupSection = ({ isOpen, onClose }) => {
         <div className={styles.header}>
           <img src={logo} alt="e-ducando logo" className={styles.logo} />
           <button className={styles.closeButton} onClick={onClose}>
-            &times;
           </button>
 
           <Text as="h3" size="32px" weight="602" color={COLORS.WHITE_COLOR} lineHeight="30px">Comece sua Experiência Gratuita</Text>
