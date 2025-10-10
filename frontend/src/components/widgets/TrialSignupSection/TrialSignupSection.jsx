@@ -24,13 +24,13 @@ const TrialSignupSection = ({ isOpen, onClose }) => {
     event.preventDefault();
     setLoading(true);
     setError('');
-
+    
+    const continueUrl = process.env.REACT_APP_URL || 'http://localhost:3000/testPage';
+    
     const actionCodeSettings = {
       // URL para onde o usuário será redirecionado após clicar no link do e-mail.
       // CUIDADO: Esta URL deve estar nos "Domínios autorizados" no seu Firebase Console.
       // Em produção, mude para a URL do seu site.
-      const continueUrl = process.enve.REACT_APP_URL || 'http://localhost:3000/testPage';
-      const actionCodeSettings = {
         url: continueUrl,
         handleCodeInApp: true,
     };
