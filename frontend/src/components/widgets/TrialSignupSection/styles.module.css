@@ -19,44 +19,48 @@
 }
 
 .closeButton {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 36px;
-  height: 36px;
-  border: 1.5px solid rgba(255, 255, 255, 0.4);
-  background-color: transparent;
-  border-radius: 50%;
-  transition: background-color 0.2s, border-color 0.2s;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s, border-color 0.2s;
 }
 
 .closeButton:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.7);
 }
 
 .closeButton::before,
 .closeButton::after {
-  content: '';
-  position: absolute;
-  width: 1.5px;
-  height: 16px;
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 1px;
-  transition: background-color 0.2s;
+  content: '';
+  position: absolute;
+  width: 1.5px;
+  height: 16px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 1px;
+  transition: background-color 0.2s;
 }
 
 .closeButton:hover::before,
 .closeButton:hover::after {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .closeButton::before {
-  transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .closeButton::after {
-  transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .body {
