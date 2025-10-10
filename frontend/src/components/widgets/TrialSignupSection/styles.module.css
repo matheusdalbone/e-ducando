@@ -6,6 +6,7 @@
   align-items: center;
   position: relative;
   gap: 14px;
+  text-align: center;
 }
 
 .logo {
