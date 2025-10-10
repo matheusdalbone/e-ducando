@@ -35,32 +35,32 @@
 }
 
 .closeButton:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.7);
 }
 
 .closeButton::before,
 .closeButton::after {
-  content: '';
-  position: absolute;
-  width: 1.5px;
-  height: 16px;
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 1px;
-  transition: background-color 0.2s;
+  content: '';
+  position: absolute;
+  width: 1.5px;
+  height: 16px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 1px;
+  transition: background-color 0.2s;
 }
 
 .closeButton:hover::before,
 .closeButton:hover::after {
-    background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .closeButton::before {
-  transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .closeButton::after {
-  transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .body {
