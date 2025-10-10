@@ -24,14 +24,12 @@ const TrialSignupSection = ({ isOpen, onClose }) => {
         
         <div className={styles.header}>
           <img src={logo} alt="e-ducando logo" className={styles.logo} />
-          <button className={styles.closeButton} onClick={onClose}>
-            &times;
-          </button>
+          <button className={styles.closeButton} onClick={onClose}></button>
 
           <Text as="h3" size="36px" weight="602" color={COLORS.WHITE_COLOR} lineHeight="30px">Comece sua Experiência Gratuita</Text>
-          <Text as='p' lineHeight='1.5' size='18px' color={COLORS.WHITE_COLOR}>
-            Acesse uma prévia de nossos materiais por 7 dias. <br />
-            Não precisa de cartão de crédito.
+          <Text as='p' lineHeight='1.5' size='20px' color={COLORS.WHITE_COLOR}>
+            Acesse uma prévia de nossos materiais por 7 dias. Não precisa <br />
+            de cartão de crédito.
           </Text>
         </div>
 
@@ -39,12 +37,12 @@ const TrialSignupSection = ({ isOpen, onClose }) => {
         <div className={styles.body}>         
           <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.inputGroup}>
-                <label htmlFor="name">Nome completo (Opcional)</label>
-                <input type="text" id="name" placeholder="Informe seu nome completo..." />
+                <label htmlFor="name">Nome (Opcional)</label>
+                <input type="text" id="name" placeholder="Informe seu nome completo" />
             </div>
             <div className={styles.inputGroup}>
                 <label htmlFor="email">E-mail (Opcional)</label>
-                <input type="email" id="email" placeholder="Informe seu melhor e-mail..." />
+                <input type="email" id="email" placeholder="Informe seu e-mail" />
             </div>
             
             <Button variant="primary-button">Experimente por 7 dias</Button>
