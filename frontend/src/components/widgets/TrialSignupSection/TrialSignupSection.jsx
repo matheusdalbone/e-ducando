@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
-/*import { useNavigate } from 'react-router-dom';*/
+import { useNavigate } from 'react-router-dom';
 
 import { auth } from "../../../Firebase/firebaseconfig";
-import { sendSignInLinkToEmail } from "firebase/auth";
+import { 
+  sendSignInLinkToEmail,
+  signInAnonymously,
+  setPersistence,
+  browserSessionPersistence
+} from "firebase/auth";
 
 import TrialSignupModal from '../../common/TrialSignupModal/TrialSignupModal';
 import styles from './styles.module.css';
@@ -13,6 +18,7 @@ import { COLORS } from "../../../utils/globalVariables";
 import logo from "../../../assets/icons/logo.svg";
 
 const TrialSignupSection = ({ isOpen, onClose }) => {
+  const navigate = useNavigate();
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -25,12 +31,14 @@ const TrialSignupSection = ({ isOpen, onClose }) => {
     setLoading(true);
     setError('');
 
+    const continueUrl = import.meta.env.VITE_APP_URL || 'http://localhost:3000/testPage';
+    
     const actionCodeSettings = {
       // URL para onde o usuário será redirecionado após clicar no link do e-mail.
       // CUIDADO: Esta URL deve estar nos "Domínios autorizados" no seu Firebase Console.
       // Em produção, mude para a URL do seu site.
-      url: 'http://localhost:3000/testPage',
-      handleCodeInApp: true,
+        url: continueUrl,
+        handleCodeInApp: true,
     };
 
     try {
@@ -47,7 +55,6 @@ const TrialSignupSection = ({ isOpen, onClose }) => {
     }
   };
 
-  // Função para resetar o estado quando o modal é fechado/reaberto
   const handleClose = () => {
     onClose();
     setTimeout(() => {
@@ -55,7 +62,39 @@ const TrialSignupSection = ({ isOpen, onClose }) => {
       setError('');
       setEmail('');
       setName('');
-    }, 300); // pequeno delay para a animação de fechar
+    }, 300);
+  };
+
+    const handleAnonymousSignIn = async () => {
+    setLoading(true);
+    setError('');
+   
+    try {
+      await setPersistence(auth, browserSessionPersistence);
+      
+      // Passo 2: Faz o login anónimo.
+      const userCredential = await signInAnonymously(auth);
+      const user = userCredential.user;
+
+      console.log("Login anónimo bem-sucedido, UID:", user.uid);
+      
+      // Opcional: Você pode querer salvar um documento no Firestore para este utilizador anónimo
+      // para rastrear o início do "trial", se necessário, mas não é obrigatório.
+      // await setDoc(doc(db, "users", user.uid), {
+      //   uid: user.uid,
+      //   role: 'estudante',
+      //   isAnonymous: true,
+      //   createdAt: serverTimestamp(),
+      // });
+      
+      setLoading(false);
+      navigate('/testPage'); // Redireciona para a página de teste
+
+    } catch (err) {
+      console.error("Erro no login anónimo:", err);
+      setError("Não foi possível continuar. Tente novamente mais tarde.");
+      setLoading(false);
+    }
   };
 
   return (
@@ -65,7 +104,6 @@ const TrialSignupSection = ({ isOpen, onClose }) => {
         <div className={styles.header}>
           <img src={logo} alt="e-ducando logo" className={styles.logo} />
           <button className={styles.closeButton} onClick={onClose}>
-            &times;
           </button>
 
           <Text as="h3" size="32px" weight="602" color={COLORS.WHITE_COLOR} lineHeight="30px">Comece sua Experiência Gratuita</Text>
@@ -101,7 +139,8 @@ const TrialSignupSection = ({ isOpen, onClose }) => {
           )}
 
           <div className={styles.footerLinks}>
-            <button className={styles.textLink}>Continuar sem cadastro</button>
+            <button className={styles.textLink} onClick={handleAnonymousSignIn}
+              disabled={loading}>Continuar sem cadastro</button>
             <p>
               Já tem uma conta?{' '}
               <button className={styles.textLink}>Fazer login</button>
