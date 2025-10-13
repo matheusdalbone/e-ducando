@@ -1,16 +1,24 @@
 import { useEffect, useState } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 import styles from "./Navbar.module.css";
+
+import { auth } from "../../../Firebase/firebaseconfig";
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 import Text from "../../common/Text/Text";
 import Button from "../../common/Button/Button";
 import Icon from "../../../assets/icons/logo.svg";
 import { COLORS } from "../../../utils/globalVariables";
+import LoginIcon from "../../../assets/icons/login.svg";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const location = useLocation();
+  const [user] = useAuthState(auth);
+  const isTestPage = location.pathname === '/testPage';
 
   const scrollOffset = -80;
   const scrollDuration = 200;
@@ -23,9 +31,7 @@ const Navbar = () => {
         setScrolled(false);
       }
     };
-
     window.addEventListener('scroll', handleScroll);
-
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -34,7 +40,7 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-   const closeMenu = () => {
+  const closeMenu = () => {
     setIsMenuOpen(false);
   };
 
@@ -51,14 +57,33 @@ const Navbar = () => {
           <Text as={ScrollLink} to="depoimentos" smooth={'easeInOutCubic'} duration={scrollDuration} offset={scrollOffset} color={COLORS.WHITE_COLOR} onClick={closeMenu} >Depoimentos</Text>
           <Text as={ScrollLink} to="acesso" smooth={'easeInOutCubic'} duration={scrollDuration} offset={scrollOffset} color={COLORS.WHITE_COLOR} onClick={closeMenu} >Acesso</Text>
 
-          <RouterLink to="loginPage" className={styles.mobileButton}>
-            <Button variant="primary-button">Começar Agora</Button>
-          </RouterLink>
+          {isTestPage ? (
+            user && (
+              <div className={`${styles.profileSection} ${styles.mobileButton}`}>
+                <span>Olá, {user.displayName || 'Estudante'}!</span>
+                <img src={LoginIcon} alt="user login" className={styles.profileIcon} />
+              </div>
+            )
+          ) : (
+            <RouterLink to="loginPage" className={styles.mobileButton}>
+              <Button variant="primary-button">Começar Agora</Button>
+            </RouterLink>
+          )}
         </nav>
 
-        <RouterLink to="loginPage" className={styles.desktopButton}>
-          <Button onClick={() => console.log('Clicou em Começar Agora')} variant="primary-button">Começar Agora</Button>
-        </RouterLink>
+        {isTestPage ? (
+          // Se estiver na testPage, mostra a saudação
+          user && (
+            <div className={`${styles.profileSection} ${styles.desktopButton}`}>
+              <span>Olá, {user.displayName || 'Estudante'}!</span>
+              <img src={LoginIcon} alt="user login" className={styles.profileIcon} />
+            </div>
+          )
+        ) : (
+          <RouterLink to="loginPage" className={styles.desktopButton}>
+            <Button onClick={() => console.log('Clicou em Começar Agora')} variant="primary-button">Começar Agora</Button>
+          </RouterLink>
+        )}
 
         <button className={`${styles.hamburger} ${isMenuOpen ? styles.open : ''}`} onClick={toggleMenu}>
           <div className={styles.bar}></div>

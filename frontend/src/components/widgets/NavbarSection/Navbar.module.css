@@ -56,6 +56,13 @@
   filter: grayscale(1) brightness(0) invert(1);
 }
 
+.profileSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
