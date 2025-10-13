@@ -31,6 +31,8 @@ const TrialSignupSection = ({ isOpen, onClose }) => {
     setLoading(true);
     setError('');
 
+    const continueUrl = import.meta.env.VITE_APP_URL || 'http://localhost:3000/testPage';
+    
     const actionCodeSettings = {
       // URL para onde o usuário será redirecionado após clicar no link do e-mail.
       // CUIDADO: Esta URL deve estar nos "Domínios autorizados" no seu Firebase Console.
