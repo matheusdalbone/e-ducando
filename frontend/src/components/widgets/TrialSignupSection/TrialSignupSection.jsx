@@ -46,7 +46,7 @@ const TrialSignupSection = ({ isOpen, onClose }) => {
 
          await setDoc(userDocRef, {
           uid: user.uid,
-          displayName: name.trim() || 'Estudante Anónimo',
+          displayName: name.trim() || 'Estudante Anônimo',
           isAnonymous: true,
           role: 'trial_user',
           trialStartDate: trialStartDate,
@@ -62,16 +62,16 @@ const TrialSignupSection = ({ isOpen, onClose }) => {
         await updateProfile(user, {
           displayName: name
         });
-        console.log("Perfil anonimo atualizado com o nome:", name);
+        console.log("Perfil anônimo atualizado com o nome:", name);
       } else {
-        console.log("Login anonimo sem nome, UID:", user.uid);
+        console.log("Login anônimo sem nome, UID:", user.uid);
       }
 
       setLoading(false);
       navigate('/testPage');
 
     } catch (err) {
-      console.error("Erro no login anonimo:", err);
+      console.error("Erro no login anônimo:", err);
       setError("Não foi possível continuar. Tente novamente mais tarde.");
       setLoading(false);
     }
@@ -96,18 +96,18 @@ const TrialSignupSection = ({ isOpen, onClose }) => {
           </button>
           <Text as="h3" size="32px" weight="602" color={COLORS.WHITE_COLOR} lineHeight="30px">Comece sua Experiência Gratuita</Text>
           <Text as='p' lineHeight='1.5' size='22px' color={COLORS.WHITE_COLOR}>
-            Acesse uma prévia de nossos materiais por 7 dias.
+            Acesse uma prévia de nossos materiais por 7 dias. Não precisa de cartão de crédito.
           </Text>
         </div>
 
         <div className={styles.body}>
           <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.inputGroup}>
-              <label htmlFor="name">Seu nome (Opcional)</label>
+              <label htmlFor="name">Nome completo (Opcional)</label>
               <input
                 type="text"
                 id="name"
-                placeholder="Como podemos te chamar?"
+                placeholder="Informe seu nome completo..."
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
@@ -117,7 +117,7 @@ const TrialSignupSection = ({ isOpen, onClose }) => {
               <input
                 type="email"
                 id="email"
-                placeholder="Usado apenas para contato futuro..."
+                placeholder="Informe seu melhor e-mail..."
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 />
@@ -126,7 +126,7 @@ const TrialSignupSection = ({ isOpen, onClose }) => {
             {error && <p className={styles.errorMessage}>{error}</p>}
 
             <Button type="submit" variant="primary-button" disabled={loading}>
-              {loading ? 'A entrar...' : 'Começar a experiência'}
+              {loading ? 'A entrar...' : 'Experimente por 7 dias'}
             </Button>
 
           </form>
