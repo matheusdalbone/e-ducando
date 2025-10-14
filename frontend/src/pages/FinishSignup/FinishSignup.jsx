@@ -1,5 +1,3 @@
-// src/pages/FinishSignup/FinishSignup.js
-
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { auth, db } from '../../Firebase/firebaseconfig';
@@ -24,7 +22,6 @@ const FinishSignup = () => {
 
           const user = result.user;
           
-          // CRIA O DOCUMENTO DE TRIAL NO FIRESTORE
           const trialStartDate = new Date();
           const trialEndDate = new Date();
           trialEndDate.setDate(trialStartDate.getDate() + 7);
@@ -32,14 +29,13 @@ const FinishSignup = () => {
           await setDoc(doc(db, "users", user.uid), {
             uid: user.uid,
             email: user.email,
-            name: 'Usuário Trial', // Você pode buscar o nome do localStorage também, se quiser
+            name: 'Usuário Trial',
             trialStartDate: trialStartDate,
             trialEndDate: trialEndDate,
-            role: 'trial', // Essencial para controlar o acesso
+            role: 'trial',
             createdAt: serverTimestamp(),
           });
 
-          // Redireciona para a página de conteúdo de teste
           navigate('/testPage');
 
         } catch (error) {
@@ -48,7 +44,7 @@ const FinishSignup = () => {
         }
       } else {
         setMessage('Acesso inválido. Redirecionando...');
-        setTimeout(() => navigate('/'), 3000); // Redireciona para a home
+        setTimeout(() => navigate('/'), 3000);
       }
     };
     completeSignIn();
