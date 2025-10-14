@@ -1,21 +1,32 @@
 import React from 'react';
 import styles from './styles.module.css';
-import { FaLock } from 'react-icons/fa';
 
-const ContentCard = ({ icon, title, description, duration, isPremium = false }) => {
+
+import IconLock from '../../../assets/icons/lock2.svg?react';
+import IconClock from '../../../assets/icons/clock2.svg?react';
+
+const ContentCard = ({ icon, title, description, duration, isPremium }) => {
   return (
     <div className={styles.card}>
       <div className={styles.header}>
         <div className={styles.iconWrapper}>{icon}</div>
-        <span className={styles.duration}>{duration}</span>
+        <div className={styles.infoIcons}>
+        {isPremium && <IconLock className={styles.infoIcon} />}
+
+        {duration && duration.toLowerCase() !== 'ilimitado' && (
+            <IconClock className={styles.infoIcon} />
+        )}
+        {duration && <span className={styles.durationText}>{duration}</span>}
+        </div>
       </div>
+
       <div className={styles.body}>
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.description}>{description}</p>
       </div>
       <div className={styles.footer}>
         <button className={isPremium ? styles.premiumButton : styles.primaryButton}>
-          {isPremium && <FaLock size={12} />}
+          {isPremium && <IconLock className={styles.buttonIconLock} />}
           <span>{isPremium ? 'Acesso Premium' : 'Acessar Conteúdo'}</span>
         </button>
       </div>
