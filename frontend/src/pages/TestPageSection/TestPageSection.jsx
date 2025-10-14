@@ -16,44 +16,41 @@ import IconInfo from '../../assets/icons/infocircle.svg?react';
 import IconCrown from '../../assets/icons/crown.svg?react';
 
 const experimentalContent = [
-  { id: 1, icon: <IconCam />, title: 'Introdução aos Estudos', description: 'Aprenda técnicas de organização e planejamento de estudos.', duration: '10min' },
-  { id: 2, icon: <IconDoc />, title: 'Métodos de Memorização', description: 'Descubra as melhores estratégias de construção de memória.', duration: '8min' },
-  { id: 3, icon: <IconBook />, title: 'Cronograma de Estudos', description: 'Aprenda a montar um cronograma que funcione para sua rotina.', duration: '5min' },
+  { id: 1, icon: <IconCam />, title: 'Introdução aos Estudos', description: 'Aprenda técnicas de organização e planejamento de estudos.', duration: '15min' },
+  { id: 2, icon: <IconDoc />, title: 'Métodos de Memorização', description: 'Descubra como melhorar sua capacidade de retenção de informações.', duration: '8min' },
+  { id: 3, icon: <IconBook />, title: 'Cronograma de Estudos', description: 'Modelo básico para organizar seu tempo de estudo.', duration: '5min' },
 ];
 const premiumContent = [
-  { id: 4, icon: <IconStar />, title: 'Técnicas Avançadas', description: 'Acesso a metodologias aprofundadas de aprendizagem.', duration: '2 horas', isPremium: true },
-  { id: 5, icon: <IconUsers />, title: 'Mentoria Personalizada', description: 'Converse com nossos mentores e tire suas dúvidas.', duration: '1 hora', isPremium: true },
-  { id: 6, icon: <IconBook3 />, title: 'Biblioteca Premium', description: 'Acesso a todos os materiais exclusivos.', duration: 'Ilimitado', isPremium: true },
+  { id: 4, icon: <IconStar />, title: 'Técnicas Avançadas', description: 'Curso completo com estratégias profissionais de aprendizagem.', duration: '3 horas', isPremium: true },
+  { id: 5, icon: <IconUsers />, title: 'Mentoria Personalizada', description: 'Sessões individuais com especialistas em educação.', duration: '1 hora', isPremium: true },
+  { id: 6, icon: <IconBook3 />, title: 'Biblioteca Premium', description: 'Acesso a mais de 500 materiais exclusivos.', duration: 'Ilimitado', isPremium: true },
 ];
 
 const TestPageSection = () => {
   return (
     <Layout>
       <div className={styles.pageContentWrapper}>
-        {/* Banner Amarelo de Alerta */}
         <div className={styles.alertBanner}>
           <IconInfo />
-          <span>Você está no modo experimental. Seu acesso é limitado e durará 7 dias. Para ter acesso completo, cadastre-se. <a href="/cadastro">Cadastre-se Agora!</a></span>
+          <Text as="span" size={'20px'} color={COLORS.WHITE_COLOR}>Você está no modo experimental. Seu acesso é limitado e durará 7 dias. Para ter acesso completo, cadastre-se. <Text as="a" size={'16px'} href="/cadastro" className={styles.ctaButton}>Cadastre-se Agora!</Text></Text>
         </div>
 
         <section className={styles.pageHeader}>
          <div className={styles.pageWrapper}>
-          {/* Seção de Cabeçalho da Página */}
-            <Text as="h1" size="90px" weight="700" color={COLORS.TERCIARY_COLOR} lineHeight="60px">
+            <Text as="h1" size={'90px'} weight="700" color={COLORS.TERCIARY_COLOR} lineHeight="60px">
               Transforme seu
-              <Text as="span" color={COLORS.SECONDARY_COLOR}> Aprendizado</Text>
+              <Text as="span" size={'90px'} color={COLORS.SECONDARY_COLOR}> Aprendizado</Text>
             </Text>
-            <Text as="p" lineHeight="50px" weight="300" size="40px" color={COLORS.WHITE_COLOR}>
+            <Text as="p" lineHeight="50px" weight="300" size={'40px'} color={COLORS.WHITE_COLOR}>
               Descubra métodos comprovados, organize seu tempo e acelere seu aprendizado com nossa plataforma completa.
             </Text>
             </div>
           </section>
 
-          {/* Seção de Conteúdo Experimental */}
           <div className={styles.pageWrapper}>
           <section className={styles.contentSection}>
-            <Text as="h2" color={COLORS.QUATERNARY_COLOR}>Conteúdo Experimental</Text>
-            <Text as='p' color={COLORS.NEUTRAL_COLOR} size={'16px'}>Explore nossos materiais introdutórios e descubra o potencial da nossa metodologia.</Text>
+            <Text as="h2" size={'48px'} color={COLORS.QUATERNARY_COLOR}>Conteúdo Experimental</Text>
+            <Text as='p' color={COLORS.NEUTRAL_COLOR} size={'32px'}>Explore nossos materiais introdutórios e descubra o potencial da nossa metodologia.</Text>
             <div className={styles.grid}>
               {experimentalContent.map(item => (
                 <ContentCard key={item.id} {...item} />
@@ -61,10 +58,9 @@ const TestPageSection = () => {
             </div>
           </section>
 
-          {/* Seção de Conteúdo Premium */}
           <section className={styles.contentSection}>
-            <Text as="h2" color={COLORS.PREMIUM_COLOR}>Conteúdo Premium</Text>
-            <Text as='p' color={COLORS.NEUTRAL_COLOR} size={'16px'}>Acesso completo a materiais avançados, cursos especializados e mentoria personalizada.</Text>
+            <Text as="h2" size={'48px'} color={COLORS.PREMIUM_COLOR}>Conteúdo Premium</Text>
+            <Text as='p' color={COLORS.NEUTRAL_COLOR} size={'32px'}>Acesso completo a materiais avançados, cursos especializados e mentoria personalizada.</Text>
             <div className={styles.grid}>
               {premiumContent.map(item => (
                 <ContentCard key={item.id} {...item} />
@@ -74,10 +70,9 @@ const TestPageSection = () => {
           </section>
         </div>
 
-        {/* Banner Roxo de CTA */}
         <div className={styles.ctaBanner}>
-          <Text as="h2" color={COLORS.WHITE_COLOR}>Pronto para desbloquear todo o conteúdo?</Text>
-          <Text as='p' color={COLORS.WHITE_COLOR} size={'22px'}>Torne-se premium e acesse mais de 200 cursos, certificações e suporte especializado.</Text>
+          <Text as="h2" size={'48px'} color={COLORS.WHITE_COLOR}>Pronto para desbloquear todo o conteúdo?</Text>
+          <Text as='p'  size={'22px'} color={COLORS.WHITE_COLOR}>Torne-se premium e acesse mais de 200 cursos, certificações e suporte especializado.</Text>
           <button>Torne-se Premium <IconCrown /></button>
         </div>
       </div>

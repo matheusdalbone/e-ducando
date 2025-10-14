@@ -10,23 +10,31 @@
   z-index: 10;
   background-color: var(--WARNING_COLOR);
   color: var(--ERROR_COLOR);
-  padding: 16px;
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  font-size: 14px;
   box-sizing: border-box;
 }
 
-.alertBanner a {
-  font-weight: 600;
-  color: var(--ERROR_COLOR);
-  text-decoration: underline;
+.ctaButton {
+  background-color: #D79E4A;
+  color: var(--WHITE_COLOR) !important;
+  border: none;
+  padding: 4px 18px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.ctaButton:hover {
+  background-color: #D79E4A;
+  transform: translateY(-2px);
 }
 
 .pageWrapper {
-  max-width: 1100px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 32px;
 }
@@ -54,21 +62,18 @@
 }
 
 .pageHeader h1 {
-  font-size: 64px !important;
   font-weight: 700 !important;
   line-height: 1.1 !important;
   margin-bottom: 60px;
 }
 
 .contentSection h2 { 
-  font-size: 36px; 
   font-weight: 700; 
   margin-bottom: 16px; 
   text-align: center;
 }
 
 .contentSection p { 
-  font-size: 16px; 
   color: #4b5563; 
   margin-bottom: 40px; 
   text-align: center;
@@ -104,8 +109,7 @@
   margin-left: auto;
   margin-right: auto;
 }
-.ctaBanner h2 { 
-    font-size: 48px; 
+.ctaBanner h2 {
     margin-bottom: 16px; 
 }
 
