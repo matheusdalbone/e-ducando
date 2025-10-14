@@ -50,6 +50,18 @@
   margin-right: 4px;
 }
 
+.expiredButton {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #f0f0f0;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
 .durationText {
   font-size: 14px;
   font-weight: 500;

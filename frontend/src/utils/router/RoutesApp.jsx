@@ -1,4 +1,5 @@
 import React from 'react';
+import { AuthProvider } from '../../context/AuthContext';
 import { Routes, Route } from 'react-router';
 
 import ProtectedRoute from '../../components/auth/ProtectedRoute';
@@ -10,6 +11,7 @@ import FinishSignup from '../../pages/FinishSignup/FinishSignup';
 const RoutesApp = () => {
 
   return (
+    <AuthProvider>
     <Routes>
       <Route path="/" element={ <HeroSection />} />
       <Route path="/loginPage" element={<PageError pageName="Página de Login" />} />
@@ -21,6 +23,7 @@ const RoutesApp = () => {
       <Route path="/finishSignup" element={<FinishSignup pageName="Finaliza Cadastro" />} />
       </Route>
     </Routes>
+    </AuthProvider>
   );
 }
 

@@ -275,6 +275,26 @@
   position: relative;
 }
 
+.expiredBanner {
+  background-color: #dc3545;
+  color: white;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.expiredBanner .ctaButton {
+  background-color: white;
+  color: #dc3545 !important;
+  font-weight: bold;
+}
+
 @media (max-width: 900px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);

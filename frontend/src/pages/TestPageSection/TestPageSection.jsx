@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './TestPageSection.module.css';
 import { COLORS } from "../../utils/globalVariables";
+import { useAuth } from '../../context/AuthContext';
 
 import Layout from '../../components/common/Layout/Layout';
 import Text from "../../components/common/Text/Text";
@@ -32,6 +33,7 @@ const premiumContent = [
 
 const TestPageSection = () => {
 
+  const { isTrialExpired, loading } = useAuth();
   const [modalType, setModalType] = useState(null);
 
   const openModalFromCard = () => setModalType('card');
@@ -49,13 +51,25 @@ const TestPageSection = () => {
     modalText = 'Torne-se premium e acesse mais de 200 cursos, certificações e suporte especializado';
   }
 
+  if (loading) {
+    return <div>A carregar...</div>; // Mostra um loading enquanto tudo é verificado
+  }
+
   return (
     <Layout>
       <div className={styles.pageContentWrapper}>
-        <div className={styles.alertBanner}>
-          <IconInfo />
-          <Text as="span" size={'20px'} color={COLORS.WHITE_COLOR}>Você está no modo experimental. Seu acesso é limitado e durará 7 dias. Para ter acesso completo, cadastre-se. <Text as="a" size={'16px'} href="/cadastro" className={styles.ctaButton}>Cadastre-se Agora!</Text></Text>
-        </div>
+        {isTrialExpired ? (
+          <div className={styles.expiredBanner}>
+            <IconInfo />
+            <Text as="span">Seu modo experimental terminou. Para continuar usando a plataforma, cadastre-se agora!</Text>
+            <Text as="a" href="/cadastro" className={styles.ctaButton}>Cadastre-se Agora!</Text>
+          </div>
+        ) : (
+          <div className={styles.alertBanner}>
+            <IconInfo />
+            <Text as="span" size={'20px'} color={COLORS.WHITE_COLOR}>Você está no modo experimental. Seu acesso é limitado e durará 7 dias. Para ter acesso completo, cadastre-se. <Text as="a" size={'16px'} href="/cadastro" className={styles.ctaButton}>Cadastre-se Agora!</Text></Text>
+          </div>
+        )}
 
         <section className={styles.pageHeader}>
           <div className={styles.pageWrapper}>
@@ -75,7 +89,7 @@ const TestPageSection = () => {
             <Text as='p' color={COLORS.NEUTRAL_COLOR} size={'32px'}>Explore nossos materiais introdutórios e descubra o potencial da nossa metodologia.</Text>
             <div className={styles.grid}>
               {experimentalContent.map(item => (
-                <ContentCard key={item.id} {...item} />
+                <ContentCard key={item.id} {...item} isTrialExpired={isTrialExpired}/>
               ))}
             </div>
           </section>
@@ -85,7 +99,7 @@ const TestPageSection = () => {
             <Text as='p' color={COLORS.NEUTRAL_COLOR} size={'32px'}>Acesso completo a materiais avançados, cursos especializados e mentoria personalizada.</Text>
             <div className={styles.grid}>
               {premiumContent.map(item => (
-                <ContentCard key={item.id} {...item} onClick={openModalFromCard} />
+                <ContentCard key={item.id} {...item} onClick={openModalFromCard} isTrialExpired={isTrialExpired}/>
               ))}
             </div>
             <button className={styles.viewAllButton}>Visualizar todos &rarr;</button>
