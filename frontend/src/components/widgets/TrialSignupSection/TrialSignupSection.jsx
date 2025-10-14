@@ -7,6 +7,9 @@ import {
   updateProfile,
 } from "firebase/auth";
 
+import { db } from "../../../Firebase/firebaseconfig";
+import { doc, getDoc, setDoc, serverTimestamp } from "firebase/firestore";
+
 import TrialSignupModal from '../../common/TrialSignupModal/TrialSignupModal';
 import styles from './styles.module.css';
 
@@ -32,20 +35,43 @@ const TrialSignupSection = ({ isOpen, onClose }) => {
       const userCredential = await signInAnonymously(auth);
       const user = userCredential.user;
 
+      const userDocRef = doc(db, "users", user.uid);
+      const docSnap = await getDoc(userDocRef);
+
+      //Verifica se o documento NÃO existe
+      if (!docSnap.exists()) {
+        const trialStartDate = new Date();
+        const trialEndDate = new Date();
+        trialEndDate.setDate(trialStartDate.getDate() + 7);
+
+         await setDoc(userDocRef, {
+          uid: user.uid,
+          displayName: name.trim() || 'Estudante Anónimo',
+          isAnonymous: true,
+          role: 'trial_user',
+          trialStartDate: trialStartDate,
+          trialEndDate: trialEndDate,
+          createdAt: serverTimestamp(),
+        });
+        console.log("Novo utilizador de teste criado. Teste termina em:", trialEndDate);
+      } else {
+        console.log("Utilizador já existente. A verificar o estado do teste...");
+      }
+
       if (name.trim() !== '') {
         await updateProfile(user, {
           displayName: name
         });
-        console.log("Perfil anónimo atualizado com o nome:", name);
+        console.log("Perfil anonimo atualizado com o nome:", name);
       } else {
-        console.log("Login anónimo sem nome, UID:", user.uid);
+        console.log("Login anonimo sem nome, UID:", user.uid);
       }
 
       setLoading(false);
       navigate('/testPage');
 
     } catch (err) {
-      console.error("Erro no login anónimo:", err);
+      console.error("Erro no login anonimo:", err);
       setError("Não foi possível continuar. Tente novamente mais tarde.");
       setLoading(false);
     }
