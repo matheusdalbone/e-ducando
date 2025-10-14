@@ -32,10 +32,22 @@ const premiumContent = [
 
 const TestPageSection = () => {
 
-  const [isModalOpen, setModalOpen] = useState(false);
+  const [modalType, setModalType] = useState(null);
 
-  const openModal = () => setModalOpen(true);
-  const closeModal = () => setModalOpen(false);
+  const openModalFromCard = () => setModalType('card');
+  const openModalFromBanner = () => setModalType('banner');
+  const closeModal = () => setModalType(null);
+
+  let modalTitle = '';
+  let modalText = '';
+
+  if (modalType === 'card') {
+    modalTitle = 'Acesso Exclusivo';
+    modalText = 'Este material faz parte do nosso acervo completo. Para ter acesso a todo o conteúdo da plataforma, cadastre-se agora e torne-se premium.';
+  } else if (modalType === 'banner') {
+    modalTitle = 'Torne-se Premium!';
+    modalText = 'Torne-se premium e acesse mais de 200 cursos, certificações e suporte especializado';
+  }
 
   return (
     <Layout>
@@ -73,7 +85,7 @@ const TestPageSection = () => {
             <Text as='p' color={COLORS.NEUTRAL_COLOR} size={'32px'}>Acesso completo a materiais avançados, cursos especializados e mentoria personalizada.</Text>
             <div className={styles.grid}>
               {premiumContent.map(item => (
-                <ContentCard key={item.id} {...item} onClick={openModal} />
+                <ContentCard key={item.id} {...item} onClick={openModalFromCard} />
               ))}
             </div>
             <button className={styles.viewAllButton}>Visualizar todos &rarr;</button>
@@ -83,11 +95,11 @@ const TestPageSection = () => {
         <div className={styles.ctaBanner}>
           <Text as="h2" size={'48px'} color={COLORS.WHITE_COLOR}>Pronto para desbloquear todo o conteúdo?</Text>
           <Text as='p' size={'22px'} color={COLORS.WHITE_COLOR}>Torne-se premium e acesse mais de 200 cursos, certificações e suporte especializado.</Text>
-          <button>Torne-se Premium <IconCrown className={styles.buttonPremium} /> </button>
+          <button onClick={openModalFromBanner}>Torne-se Premium <IconCrown className={styles.buttonPremium} /> </button>
         </div>
       </div>
 
-      <TrialSignupModal isOpen={isModalOpen} onClose={closeModal}>
+      <TrialSignupModal isOpen={modalType !== null} onClose={closeModal}>
         <div className={styles.premiumModalContent}>
 
           <button className={styles.closeButton} onClick={closeModal}>
@@ -96,11 +108,11 @@ const TestPageSection = () => {
 
           <div className={styles.premiumModalHeader}>
             <IconCrown className={styles.crownIcon} />
-            <Text as="h2" size={'36px'} color={COLORS.TERCIARY_COLOR}>Acesso Exclusivo</Text>
+            <Text as="h2" size={'36px'} color={COLORS.TERCIARY_COLOR}>{modalTitle}</Text>
           </div>
 
           <Text as="p" size={'24px'} color={COLORS.QUATERNARY_COLOR} className={styles.premiumModalText}>
-            Este material faz parte do nosso acervo completo. Para ter acesso a todo o conteúdo da plataforma, cadastre-se agora e torne-se premium.
+            {modalText}
           </Text>
 
           <button className={styles.premiumCtaButton}>
