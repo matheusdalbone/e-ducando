@@ -73,7 +73,7 @@ const TestPageSection = () => {
         <div className={styles.ctaBanner}>
           <Text as="h2" size={'48px'} color={COLORS.WHITE_COLOR}>Pronto para desbloquear todo o conteúdo?</Text>
           <Text as='p'  size={'22px'} color={COLORS.WHITE_COLOR}>Torne-se premium e acesse mais de 200 cursos, certificações e suporte especializado.</Text>
-          <button>Torne-se Premium <IconCrown /></button>
+          <button>Torne-se Premium <IconCrown className={styles.buttonPremium} /> </button>
         </div>
       </div>
     </Layout>

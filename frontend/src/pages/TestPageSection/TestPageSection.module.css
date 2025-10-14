@@ -39,10 +39,10 @@
   padding: 0 32px;
 }
 
-.pageHeader { 
-  text-align: center; 
-  padding: 220px 0 200px 0; 
-  background-color: var(--SECBACKGROUND_COLOR); 
+.pageHeader {
+  text-align: center;
+  padding: 220px 0 200px 0;
+  background-color: var(--SECBACKGROUND_COLOR);
   width: 100vw;
   position: relative;
   left: 50%;
@@ -51,9 +51,9 @@
   margin-right: -50vw;
 }
 
-.contentSection { 
-  padding: 48px 0; 
-  border-top: 1px solid #e5e7eb; 
+.contentSection {
+  padding: 48px 0;
+  border-top: 1px solid #e5e7eb;
   text-align: center;
 }
 
@@ -67,15 +67,15 @@
   margin-bottom: 60px;
 }
 
-.contentSection h2 { 
-  font-weight: 700; 
-  margin-bottom: 16px; 
+.contentSection h2 {
+  font-weight: 700;
+  margin-bottom: 16px;
   text-align: center;
 }
 
-.contentSection p { 
-  color: #4b5563; 
-  margin-bottom: 40px; 
+.contentSection p {
+  color: #4b5563;
+  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -109,14 +109,15 @@
   margin-left: auto;
   margin-right: auto;
 }
+
 .ctaBanner h2 {
-    margin-bottom: 16px; 
+  margin-bottom: 16px;
 }
 
-.ctaBanner p { 
-    max-width: 750px; 
-    margin: 0 auto 32px; 
-    opacity: 0.9; 
+.ctaBanner p {
+  max-width: 750px;
+  margin: 0 auto 32px;
+  opacity: 0.9;
 }
 
 .ctaBanner button {
@@ -125,7 +126,7 @@
   border: none;
   padding: 14px 28px;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 600;
   cursor: pointer;
   display: inline-flex;
@@ -133,9 +134,20 @@
   gap: 8px;
 }
 
-@media (max-width: 900px) { 
-    .grid { grid-template-columns: repeat(2, 1fr); } 
+.buttonPremium {
+  width: 29px;
+  height: 34px;
+  fill: var(--WHITE_COLOR);
 }
-@media (max-width: 600px) { 
-    .grid { grid-template-columns: 1fr; } 
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
