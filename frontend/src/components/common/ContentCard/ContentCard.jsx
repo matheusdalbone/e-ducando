@@ -5,18 +5,26 @@ import styles from './styles.module.css';
 import IconLock from '../../../assets/icons/lock2.svg?react';
 import IconClock from '../../../assets/icons/clock2.svg?react';
 
-const ContentCard = ({ icon, title, description, duration, isPremium }) => {
+const ContentCard = ({ icon, title, description, duration, isPremium, onClick }) => {
+
+  const handleClick = () => {
+    if (isPremium && onClick) {
+      onClick();
+    }
+  };
+
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} ${isPremium ? styles.premiumCard : ''}`} 
+      onClick={handleClick}>
       <div className={styles.header}>
         <div className={styles.iconWrapper}>{icon}</div>
         <div className={styles.infoIcons}>
-        {isPremium && <IconLock className={styles.infoIcon} />}
+          {isPremium && <IconLock className={styles.infoIcon} />}
 
-        {duration && duration.toLowerCase() !== 'ilimitado' && (
+          {duration && duration.toLowerCase() !== 'ilimitado' && (
             <IconClock className={styles.infoIcon} />
-        )}
-        {duration && <span className={styles.durationText}>{duration}</span>}
+          )}
+          {duration && <span className={styles.durationText}>{duration}</span>}
         </div>
       </div>
 

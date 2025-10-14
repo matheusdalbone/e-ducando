@@ -1,3 +1,7 @@
+.premiumCard {
+  cursor: pointer;
+}
+
 .card {
   background-color: var(--CARD_COLOR);
   border: 1px solid #e5e7eb;

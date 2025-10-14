@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './TestPageSection.module.css';
 import { COLORS } from "../../utils/globalVariables";
 
 import Layout from '../../components/common/Layout/Layout';
 import Text from "../../components/common/Text/Text";
 import ContentCard from '../../components/common/ContentCard/ContentCard';
+
+import TrialSignupModal from '../../components/common/TrialSignupModal/TrialSignupModal';
+
 
 import IconCam from '../../assets/icons/cam.svg?react';
 import IconDoc from '../../assets/icons/doc.svg?react';
@@ -14,6 +17,7 @@ import IconUsers from '../../assets/icons/users.svg?react';
 import IconBook3 from '../../assets/icons/bookthree.svg?react';
 import IconInfo from '../../assets/icons/infocircle.svg?react';
 import IconCrown from '../../assets/icons/crown.svg?react';
+import { IoClose } from 'react-icons/io5';
 
 const experimentalContent = [
   { id: 1, icon: <IconCam />, title: 'Introdução aos Estudos', description: 'Aprenda técnicas de organização e planejamento de estudos.', duration: '15min' },
@@ -27,6 +31,12 @@ const premiumContent = [
 ];
 
 const TestPageSection = () => {
+
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
+
   return (
     <Layout>
       <div className={styles.pageContentWrapper}>
@@ -36,7 +46,7 @@ const TestPageSection = () => {
         </div>
 
         <section className={styles.pageHeader}>
-         <div className={styles.pageWrapper}>
+          <div className={styles.pageWrapper}>
             <Text as="h1" size={'90px'} weight="700" color={COLORS.TERCIARY_COLOR} lineHeight="60px">
               Transforme seu
               <Text as="span" size={'90px'} color={COLORS.SECONDARY_COLOR}> Aprendizado</Text>
@@ -44,10 +54,10 @@ const TestPageSection = () => {
             <Text as="p" lineHeight="50px" weight="300" size={'40px'} color={COLORS.WHITE_COLOR}>
               Descubra métodos comprovados, organize seu tempo e acelere seu aprendizado com nossa plataforma completa.
             </Text>
-            </div>
-          </section>
+          </div>
+        </section>
 
-          <div className={styles.pageWrapper}>
+        <div className={styles.pageWrapper}>
           <section className={styles.contentSection}>
             <Text as="h2" size={'48px'} color={COLORS.QUATERNARY_COLOR}>Conteúdo Experimental</Text>
             <Text as='p' color={COLORS.NEUTRAL_COLOR} size={'32px'}>Explore nossos materiais introdutórios e descubra o potencial da nossa metodologia.</Text>
@@ -63,7 +73,7 @@ const TestPageSection = () => {
             <Text as='p' color={COLORS.NEUTRAL_COLOR} size={'32px'}>Acesso completo a materiais avançados, cursos especializados e mentoria personalizada.</Text>
             <div className={styles.grid}>
               {premiumContent.map(item => (
-                <ContentCard key={item.id} {...item} />
+                <ContentCard key={item.id} {...item} onClick={openModal} />
               ))}
             </div>
             <button className={styles.viewAllButton}>Visualizar todos &rarr;</button>
@@ -72,10 +82,43 @@ const TestPageSection = () => {
 
         <div className={styles.ctaBanner}>
           <Text as="h2" size={'48px'} color={COLORS.WHITE_COLOR}>Pronto para desbloquear todo o conteúdo?</Text>
-          <Text as='p'  size={'22px'} color={COLORS.WHITE_COLOR}>Torne-se premium e acesse mais de 200 cursos, certificações e suporte especializado.</Text>
+          <Text as='p' size={'22px'} color={COLORS.WHITE_COLOR}>Torne-se premium e acesse mais de 200 cursos, certificações e suporte especializado.</Text>
           <button>Torne-se Premium <IconCrown className={styles.buttonPremium} /> </button>
         </div>
       </div>
+
+      <TrialSignupModal isOpen={isModalOpen} onClose={closeModal}>
+        <div className={styles.premiumModalContent}>
+
+          <button className={styles.closeButton} onClick={closeModal}>
+            <IoClose size={24} />
+          </button>
+
+          <div className={styles.premiumModalHeader}>
+            <IconCrown className={styles.crownIcon} />
+            <Text as="h2" size={'36px'} color={COLORS.TERCIARY_COLOR}>Acesso Exclusivo</Text>
+          </div>
+
+          <Text as="p" size={'24px'} color={COLORS.QUATERNARY_COLOR} className={styles.premiumModalText}>
+            Este material faz parte do nosso acervo completo. Para ter acesso a todo o conteúdo da plataforma, cadastre-se agora e torne-se premium.
+          </Text>
+
+          <button className={styles.premiumCtaButton}>
+            Torne-se Premium Agora!
+          </button>
+
+          <div className={styles.benefitsBox}>
+            <Text as="h3" size={'24px'} color={COLORS.PREMIUM_COLOR}>Benefícios da Conta Premium:</Text>
+            <ul>
+              <Text as="li" size={'20px'} weight="200" color={COLORS.TERCIARY_COLOR}>Acesso ilimitado a todos os materiais</Text>
+              <Text as="li" size={'20px'} weight="200" color={COLORS.TERCIARY_COLOR}>Download de conteúdos para estudo offline</Text>
+              <Text as="li" size={'20px'} weight="200" color={COLORS.TERCIARY_COLOR}>Acompanhamento de progresso personalizado</Text>
+              <Text as="li" size={'20px'} weight="200" color={COLORS.TERCIARY_COLOR}>Suporte prioritário da equipe</Text>
+            </ul>
+          </div>
+
+        </div>
+      </TrialSignupModal>
     </Layout>
   );
 };

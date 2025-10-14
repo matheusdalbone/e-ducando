@@ -140,6 +140,141 @@
   fill: var(--WHITE_COLOR);
 }
 
+.premiumModalContent {
+  background: var(--WHITE_COLOR);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 40px;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+  color: var(--TERCIARY_COLOR);
+  gap: 50px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid rgba(53, 40, 173, 0.4);
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.closeButton:hover {
+  background-color: rgba(49, 6, 167, 0.4);
+  border-color: rgba(53, 40, 173, 0.4);
+}
+
+.closeButton::before,
+.closeButton::after {
+  content: '';
+  position: absolute;
+  width: 1.5px;
+  height: 16px;
+  background-color: rgba(53, 40, 173, 0.4);
+  border-radius: 1px;
+  transition: background-color 0.2s;
+}
+
+.closeButton:hover::before,
+.closeButton:hover::after {
+  background-color: rgba(53, 40, 173, 0.4);
+}
+
+.closeButton::before {
+  transform: rotate(45deg);
+}
+
+.closeButton::after {
+  transform: rotate(-45deg);
+}
+
+.premiumModalHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  text-align: center;
+}
+
+.crownIcon {
+  fill: var(--WARNING_COLOR);
+  width: 88px;
+  height: auto;
+}
+
+.premiumModalHeader h2 {
+  margin: 0;
+}
+
+.premiumModalText {
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.premiumCtaButton {
+  background-color: var(--TERCIARY_COLOR);
+  color: var(--WHITE_COLOR);
+  border: none;
+  border-radius: 15px;
+  padding: 30px 80px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 90%;
+  max-width: 500px;
+  margin-bottom: 0;
+  transition: background-color 0.2s;
+}
+
+.premiumCtaButton:hover {
+  background-color: var(--QUATERNARY_COLOR);
+}
+
+.benefitsBox {
+  background-color: var(--CARD_COLOR);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  width: 100%; 
+}
+
+.benefitsBox h3 {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.benefitsBox ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefitsBox li {
+  margin-bottom: 5px;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.2;
+  font-style: italic;
+}
+
+.benefitsBox li::before {
+  content: '•';
+  color: var(--TERCIARY_COLOR);
+  position: relative;
+}
+
 @media (max-width: 900px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
