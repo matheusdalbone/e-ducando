@@ -23,7 +23,7 @@
   gap: 64px;
   margin-top: 40px;
   flex-wrap: nowrap;
-  overflow-x: auto;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -69,6 +69,6 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 16px;
-    overflow-x: visible;
+    overflow-x: hidden;
   }
 }

@@ -444,7 +444,8 @@
   }
 
   .pageHeader {
-    padding: 140px 0 100px 0; /* Reduz ainda mais o espaçamento */
+    /* ALTERAÇÃO: Aumentado para 300px para garantir espaço suficiente */
+    padding: 300px 0 100px 0; 
   }
 
   /* Reduz drasticamente os tamanhos das fontes no cabeçalho */
