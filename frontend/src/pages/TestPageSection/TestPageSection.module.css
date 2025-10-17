@@ -417,25 +417,24 @@
 
 @media (max-width: 900px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr); /* Grelha passa para 2 colunas */
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .pageHeader {
-    padding: 180px 0 160px 0; /* Reduz o espaçamento vertical */
+    padding: 180px 0 160px 0;
   }
 }
 
-/* Para Telemóveis (abaixo de 600px) */
 @media (max-width: 600px) {
   .pageWrapper {
-    padding: 0 16px; /* Reduz o espaçamento lateral da página */
+    padding: 0 16px;
   }
 
   .alertBanner, .expiredBanner {
-    top: 60px; /* Sobe o banner para se ajustar a um navbar menor */
+    top: 60px;
     padding: 12px;
-    font-size: 14px; /* Reduz o tamanho da fonte do banner */
-    flex-direction: column; /* Empilha o ícone e o texto verticalmente se necessário */
+    font-size: 14px;
+    flex-direction: column;
     gap: 8px;
   }
   .alertBanner .ctaButton, .expiredBanner .ctaButton {
@@ -444,11 +443,9 @@
   }
 
   .pageHeader {
-    /* ALTERAÇÃO: Aumentado para 300px para garantir espaço suficiente */
     padding: 300px 0 100px 0; 
   }
 
-  /* Reduz drasticamente os tamanhos das fontes no cabeçalho */
   .pageHeader h1, .pageHeader h1 span {
     font-size: 48px !important;
     line-height: 1.2 !important;
@@ -460,18 +457,18 @@
   }
 
   .contentSection {
-    padding: 32px 0; /* Menos espaçamento nas secções */
+    padding: 32px 0;
   }
 
   .contentSection h2 {
-    font-size: 32px !important; /* Títulos de secção menores */
+    font-size: 32px !important;
   }
   .contentSection p {
-    font-size: 18px !important; /* Parágrafos de secção menores */
+    font-size: 18px !important;
   }
 
   .grid {
-    grid-template-columns: 1fr; /* Grelha passa para 1 coluna */
+    grid-template-columns: 1fr;
   }
 
   .ctaBanner {
@@ -488,10 +485,9 @@
     padding: 12px 24px;
   }
 
-  /* Ajustes nos modais para telemóveis */
   .premiumModalContent, .expiredModalContent {
-    padding: 30px 20px; /* Menos espaçamento interno */
-    gap: 15px; /* Menos espaço entre os elementos */
+    padding: 30px 20px;
+    gap: 15px;
   }
   .premiumModalHeader h2, .expiredModalHeader h2 {
     font-size: 24px !important;
