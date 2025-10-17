@@ -18,7 +18,7 @@
   box-sizing: border-box;
 }
 
-.ctaButton {
+.alertctaButton {
   background-color: #D79E4A;
   color: var(--WHITE_COLOR) !important;
   border: none;
@@ -28,7 +28,7 @@
   margin-left: 10px;
 }
 
-.ctaButton:hover {
+.alertctaButton:hover {
   background-color: #D79E4A;
   transform: translateY(-2px);
 }
@@ -276,24 +276,34 @@
 }
 
 .expiredBanner {
-  background-color: #dc3545;
-  color: white;
   position: absolute;
   top: 80px;
   left: 0;
   width: 100%;
   z-index: 10;
+  background-color: var(--ERROR_COLOR);
+  color: var(--WHITE_COLOR);
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
+  box-sizing: border-box;
 }
 
-.expiredBanner .ctaButton {
-  background-color: white;
-  color: #dc3545 !important;
-  font-weight: bold;
+.expictaButton {
+  background-color: var(--WHITE_COLOR);
+  color: var(--ERROR_COLOR);
+  border: none;
+  padding: 4px 18px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.expictaButton:hover {
+  background-color: var(--WHITE_COLOR);
+  transform: translateY(-2px);
 }
 
 .expiredModalContent {

@@ -98,13 +98,14 @@ const TestPageSection = () => {
         {isTrialExpired ? (
           <div className={styles.expiredBanner}>
             <IconInfo />
-            <Text as="span">Seu modo experimental terminou. Para continuar usando a plataforma, cadastre-se agora!</Text>
-            <Text as="a" href="/cadastro" className={styles.ctaButton}>Cadastre-se Agora!</Text>
+            <Text as="span" size={'20px'} color={COLORS.WHITE_COLOR}>Seu modo experimental terminou. Para continuar usando a plataforma, cadastre-se agora!</Text>
+            <Text as="a" size={'16px'} href="/cadastro" className={styles.expictaButton}>Cadastre-se Agora!</Text>
           </div>
         ) : (
           <div className={styles.alertBanner}>
             <IconInfo />
-            <Text as="span" size={'20px'} color={COLORS.WHITE_COLOR}>Você está no modo experimental. Seu acesso é limitado e durará 7 dias. Para ter acesso completo, cadastre-se. <Text as="a" size={'16px'} href="/cadastro" className={styles.ctaButton}>Cadastre-se Agora!</Text></Text>
+            <Text as="span" size={'20px'} color={COLORS.WHITE_COLOR}>Você está no modo experimental. Seu acesso é limitado e durará 7 dias. Para ter acesso completo, cadastre-se.</Text>
+            <Text as="a" size={'16px'} href="/cadastro" className={styles.alertctaButton}>Cadastre-se Agora!</Text>
           </div>
         )}
 
