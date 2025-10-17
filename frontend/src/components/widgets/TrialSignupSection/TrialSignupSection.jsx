@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-import { auth } from "../../../Firebase/firebaseconfig";
-import {
-  signInAnonymously,
-  updateProfile,
-} from "firebase/auth";
-
-import { db } from "../../../Firebase/firebaseconfig";
+import { useAuth } from '../../../context/AuthContext';
+import { auth, db } from "../../../Firebase/firebaseconfig";
+import { signInAnonymously, updateProfile } from "firebase/auth";
 import { doc, getDoc, setDoc, serverTimestamp } from "firebase/firestore";
 
 import TrialSignupModal from '../../common/TrialSignupModal/TrialSignupModal';
@@ -20,6 +15,7 @@ import logo from "../../../assets/icons/logo.svg";
 
 const TrialSignupSection = ({ isOpen, onClose }) => {
   const navigate = useNavigate();
+  const { recheckTrialStatus } = useAuth();
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -32,14 +28,15 @@ const TrialSignupSection = ({ isOpen, onClose }) => {
     setError('');
 
     try {
+      console.log('1. A fazer o login anônimo...');
       const userCredential = await signInAnonymously(auth);
       const user = userCredential.user;
 
       const userDocRef = doc(db, "users", user.uid);
       const docSnap = await getDoc(userDocRef);
 
-      //Verifica se o documento NÃO existe
       if (!docSnap.exists()) {
+        console.log('2. Utilizador novo. A criar o documento no Firestore...');
         const trialStartDate = new Date();
         const trialEndDate = new Date();
         trialEndDate.setDate(trialStartDate.getDate() + 7);
@@ -53,6 +50,8 @@ const TrialSignupSection = ({ isOpen, onClose }) => {
           trialEndDate: trialEndDate,
           createdAt: serverTimestamp(),
         });
+        console.log('3. A forçar a reverificação do estado do teste...');
+        await recheckTrialStatus();
         console.log("Novo utilizador de teste criado. Teste termina em:", trialEndDate);
       } else {
         console.log("Utilizador já existente. A verificar o estado do teste...");
@@ -60,13 +59,14 @@ const TrialSignupSection = ({ isOpen, onClose }) => {
 
       if (name.trim() !== '') {
         await updateProfile(user, {
-          displayName: name
-        });
+          displayName: name});
+          await user.reload();
         console.log("Perfil anônimo atualizado com o nome:", name);
       } else {
         console.log("Login anônimo sem nome, UID:", user.uid);
       }
 
+      console.log('4. Tudo pronto. A navegar para /testPage...');
       setLoading(false);
       navigate('/testPage');
 
