@@ -8,22 +8,18 @@ import IconClock from '../../../assets/icons/clock2.svg?react';
 const ContentCard = ({ icon, title, description, duration, isPremium, onClick, isTrialExpired }) => {
 
   const handleClick = () => {
-
-    if (isTrialExpired) return;
-
-    if (isPremium && onClick) {
+    if (onClick) {
       onClick();
     }
   };
 
   return (
-    <div className={`${styles.card} ${isPremium ? styles.premiumCard : ''}`}
-      onClick={handleClick}>
+    <div className={`${styles.card} ${onClick ? styles.clickable : ''}`} onClick={handleClick}>
+
       <div className={styles.header}>
         <div className={styles.iconWrapper}>{icon}</div>
         <div className={styles.infoIcons}>
           {isPremium && <IconLock className={styles.infoIcon} />}
-
           {duration && duration.toLowerCase() !== 'ilimitado' && (
             <IconClock className={styles.infoIcon} />
           )}
@@ -37,16 +33,25 @@ const ContentCard = ({ icon, title, description, duration, isPremium, onClick, i
       </div>
 
       <div className={styles.footer}>
-        {isTrialExpired ? (
-          <button className={styles.expiredButton} disabled>
-            Período Expirado
+        {isTrialExpired && !isPremium ? (
+          // CASO 1: Teste expirado E o card NÃO é premium
+          <button className={styles.expiredButton}>
+            <IconLock className={styles.buttonIconLock} />
+            <span>Período Expirado</span>
           </button>
         ) : (
+          // CASO 2: Teste está ativo OU o card é premium
           <button className={isPremium ? styles.premiumButton : styles.primaryButton}>
-            {isPremium && <IconLock className={styles.buttonIconLock} />}
-            <span>{isPremium ? 'Acesso Premium' : 'Acessar Conteúdo'}</span>
+            {isPremium ? (
+              <>
+                <IconLock className={styles.buttonIconLock} />
+                <span>Acesso Premium</span>
+              </>
+            ) : (
+              <span>Acessar Conteúdo</span>
+            )}
           </button>
-          )}
+        )}
       </div>
     </div>
   );

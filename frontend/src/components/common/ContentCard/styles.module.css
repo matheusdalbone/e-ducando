@@ -50,18 +50,6 @@
   margin-right: 4px;
 }
 
-.expiredButton {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  background-color: #f0f0f0;
-  color: #aaa;
-  cursor: not-allowed;
-}
-
 .durationText {
   font-size: 14px;
   font-weight: 500;
@@ -89,7 +77,8 @@
 }
 
 .primaryButton,
-.premiumButton {
+.premiumButton,
+.expiredButton {
   width: 100%;
   padding: 12px;
   border: none;
@@ -103,12 +92,12 @@
   gap: 8px;
 }
 
-.primaryButton {
-  background-color: var(--TERCIARY_COLOR);
+.premiumButton {
+  background-color: var(--PREMIUM_COLOR);
   color: white;
 }
 
-.premiumButton {
-  background-color: var(--PREMIUM_COLOR);
+.expiredButton {
+  background-color: #625B71;
   color: white;
 }

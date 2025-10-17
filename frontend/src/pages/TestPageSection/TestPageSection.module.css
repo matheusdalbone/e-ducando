@@ -247,7 +247,7 @@
   padding: 40px;
   border-radius: 15px;
   text-align: center;
-  width: 100%; 
+  width: 100%;
 }
 
 .benefitsBox h3 {
@@ -289,10 +289,120 @@
   justify-content: center;
   gap: 12px;
 }
+
 .expiredBanner .ctaButton {
   background-color: white;
   color: #dc3545 !important;
   font-weight: bold;
+}
+
+.expiredModalContent {
+  background: var(--WHITE_COLOR);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 40px;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+  color: var(--TERCIARY_COLOR);
+  gap: 50px;
+}
+
+.expiredModalHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  text-align: center;
+}
+
+.clockIcon {
+  fill: var(--ERROR_COLOR);
+  width: 88px;
+  height: auto;
+}
+
+.expiredModalHeader h2 {
+  margin: 0;
+}
+
+.expiredModalText {
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.inputGroup {
+  width: 100%;
+  text-align: left;
+}
+
+.inputGroup label {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--NEUTRAL_COLOR);
+  margin-bottom: 5px;
+  display: block;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 16px;
+  height: 56px;
+  border: none;
+  background-color: #D9D9D9;
+  border-radius: 10px;
+  font-size: 16px;
+  color: var(--NEUTRAL_COLOR);
+  box-sizing: border-box;
+}
+
+.inputGroup input::placeholder {
+  color: #a0aec0;
+}
+
+.inputGroup input:focus {
+  outline: none;
+  border-color: #D9D9D9;
+  box-shadow: 0 0 0 2px rgba(161, 160, 160, 0.2);
+}
+
+.expiredCtaButton {
+  background-color: var(--TERCIARY_COLOR);
+  color: var(--WHITE_COLOR);
+  border: none;
+  border-radius: 15px;
+  padding: 30px 150px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 0;
+  transition: background-color 0.2s;
+  margin-top: 60px;
+}
+
+.expiredCtaButton:hover {
+  background-color: var(--QUATERNARY_COLOR);
+}
+
+.loginLink {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: var(--QUATERNARY_COLOR);
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.loginLink:hover {
+  background-color: transparent;
+  text-decoration: underline;
 }
 
 @media (max-width: 900px) {

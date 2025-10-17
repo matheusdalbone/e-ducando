@@ -14,7 +14,7 @@ const RoutesApp = () => {
     <AuthProvider>
     <Routes>
       <Route path="/" element={ <HeroSection />} />
-      <Route path="/loginPage" element={<PageError pageName="Página de Login" />} />
+      <Route path="/testPage" element={<TestPageSection pageName="Página de Login" />} />
 
       <Route element={<ProtectedRoute />}>
       <Route path="/pageWithoutLogin" element={<PageError pageName="Página Sem Login" />} />
