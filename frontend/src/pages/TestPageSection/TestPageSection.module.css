@@ -417,12 +417,85 @@
 
 @media (max-width: 900px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Grelha passa para 2 colunas */
+  }
+
+  .pageHeader {
+    padding: 180px 0 160px 0; /* Reduz o espaçamento vertical */
   }
 }
 
+/* Para Telemóveis (abaixo de 600px) */
 @media (max-width: 600px) {
+  .pageWrapper {
+    padding: 0 16px; /* Reduz o espaçamento lateral da página */
+  }
+
+  .alertBanner, .expiredBanner {
+    top: 60px; /* Sobe o banner para se ajustar a um navbar menor */
+    padding: 12px;
+    font-size: 14px; /* Reduz o tamanho da fonte do banner */
+    flex-direction: column; /* Empilha o ícone e o texto verticalmente se necessário */
+    gap: 8px;
+  }
+  .alertBanner .ctaButton, .expiredBanner .ctaButton {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+
+  .pageHeader {
+    padding: 140px 0 100px 0; /* Reduz ainda mais o espaçamento */
+  }
+
+  /* Reduz drasticamente os tamanhos das fontes no cabeçalho */
+  .pageHeader h1, .pageHeader h1 span {
+    font-size: 48px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 30px;
+  }
+  .pageHeader p {
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+  }
+
+  .contentSection {
+    padding: 32px 0; /* Menos espaçamento nas secções */
+  }
+
+  .contentSection h2 {
+    font-size: 32px !important; /* Títulos de secção menores */
+  }
+  .contentSection p {
+    font-size: 18px !important; /* Parágrafos de secção menores */
+  }
+
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Grelha passa para 1 coluna */
+  }
+
+  .ctaBanner {
+    padding: 40px 20px;
+  }
+  .ctaBanner h2 {
+    font-size: 32px !important;
+  }
+  .ctaBanner p {
+    font-size: 18px !important;
+  }
+  .ctaBanner button {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+
+  /* Ajustes nos modais para telemóveis */
+  .premiumModalContent, .expiredModalContent {
+    padding: 30px 20px; /* Menos espaçamento interno */
+    gap: 15px; /* Menos espaço entre os elementos */
+  }
+  .premiumModalHeader h2, .expiredModalHeader h2 {
+    font-size: 24px !important;
+  }
+  .premiumModalText, .expiredModalText {
+    font-size: 16px !important;
   }
 }
