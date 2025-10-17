@@ -21,7 +21,8 @@ import IconBook3 from '../../assets/icons/bookthree.svg?react';
 import IconInfo from '../../assets/icons/infocircle.svg?react';
 import IconCrown from '../../assets/icons/crown.svg?react';
 import IconClock from '../../assets/icons/clockRed.svg?react';
-import { IoClose, IoTimeOutline } from 'react-icons/io5';
+import IconClockBanner from '../../assets/icons/clockBanner.svg?react';
+import { IoClose } from 'react-icons/io5';
 import { Button } from 'react-scroll';
 
 const experimentalContent = [
@@ -97,7 +98,7 @@ const TestPageSection = () => {
       <div className={styles.pageContentWrapper}>
         {isTrialExpired ? (
           <div className={styles.expiredBanner}>
-            <IconInfo />
+            <IconClockBanner />
             <Text as="span" size={'20px'} color={COLORS.WHITE_COLOR}>Seu modo experimental terminou. Para continuar usando a plataforma, cadastre-se agora!</Text>
             <Text as="a" size={'16px'} href="/cadastro" className={styles.expictaButton}>Cadastre-se Agora!</Text>
           </div>
